@@ -1,0 +1,1 @@
+kojo_root/Contents/PlugIns/jre.bundle/Contents/Home/bin/java

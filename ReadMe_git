@@ -1,0 +1,41 @@
+https://github.com/litan/kojo/blob/master/localization.md
+
+Translation to Turkish:
+Level 1: ~/src/kojo/git/kojo/src/main/resources/net/kogics/kojo/lite/Bundle_tr.properties
+Level 2: ~/src/kojo/git/kojo/l10n-level2/level2_tr.properties
+1- forked at GitHub
+2- git clone https://github.com/bulent2k2/kojo.git
+   cd kojo
+3- YAZ YAZILIMCIK!
+   # pull request from lilit's repo to my fork (@GitHub)
+   # then, update my clone:  see log: 
+   git pull 
+4- Just run alias build to compile/test/run
+   build
+OLD {
+   ./sbt.sh clean package
+   ./sbt.sh test
+   ./sbt.sh run
+   (Select [1] net.kogics.kojo.lite.DesktopMain)
+}
+5- git add ./src/main/resources/net/kogics/kojo/lite/Bundle_tr.properties
+   git commit -am 'Added first rev of turkish level 1'
+   ./sbt.sh buildDist
+6- git remote -v
+   git push
+   git push --set-upstream origin master
+7- pull request from fork at GitHub
+
+
+Note: due to 2-step verification, had to do a little hacking:
+git remote remove origin
+git remote add origin git@github.com:bulent2k2/kojo.git
+git remote -v
+git remote set-url origin https://github.com/bulent2k2/kojo.git
+git credential-osxkeychain
+git config --global credential.helper osxkeychain
+git push --set-upstream origin master
+
+Asked for a username and for password, used my token:
+Username for 'https://github.com': bulent2k2
+Password for 'https://bulent2k2@github.com': f697fdb9199685418559fc78c1ac0656b57afb66

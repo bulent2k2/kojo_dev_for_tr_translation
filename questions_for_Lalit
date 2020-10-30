@@ -1,0 +1,41 @@
+* DONE Export as web-app fails on turkish code -- ikojo doesn't support localization yet.
+Web-compiling via iKojo...
+Sending script...
+Reading response...
+Response message: OK
+Reading response body...
+Script compilation done.
+Parsing response...
+Parsing done.
+Compilation error:
+ScalaFiddle.scala:19: error: not found: value çıktıyıSil
+çıktıyıSil()
+^
+ScalaFiddle.scala:20: error: not found: value satıryaz
+satıryaz("Haydi bir güneş çizelim!")
+^
+ScalaFiddle.scala:28: error: not found: value sarı
+val kolRengi=if(güzelRenk) Color(255, 206, 28) else sarı
+                                                    ^
+ScalaFiddle.scala:30: error: not found: value sil
+sil()
+^
+
+* DONE Compilation warnings -- bbx fixed it.
+[info] Compiling 172 Scala sources and 22 Java sources to /Users/ben/src/kojo/git/kojo/target/scala-2.13/classes...
+[warn] /Users/ben/src/kojo/git/kojo/src/main/scala/net/kogics/kojo/lite/i18n/trInit.scala:112: procedure syntax is deprecated: instead, add `: Unit =` to explicitly declare `yinele`'s return type
+[warn]   def yinele(n: Int)(block: => Unit) {
+[warn]                                      ^
+[warn] /Users/ben/src/kojo/git/kojo/src/main/scala/net/kogics/kojo/lite/i18n/trInit.scala:116: procedure syntax is deprecated: instead, add `: Unit =` to explicitly declare `yineleDizinli`'s return type
+[warn]   def yineleDizinli(n: Int)(block: Int => Unit) {
+[warn]                                                 ^
+[warn] /Users/ben/src/kojo/git/kojo/src/main/scala/net/kogics/kojo/lite/i18n/trInit.scala:120: procedure syntax is deprecated: instead, add `: Unit =` to explicitly declare `yineleDogruysa`'s return type
+[warn]   def yineleDogruysa(koşul: => Boolean)(block: => Unit) {
+[warn]                                                         ^
+[warn] /Users/ben/src/kojo/git/kojo/src/main/scala/net/kogics/kojo/lite/i18n/trInit.scala:124: procedure syntax is deprecated: instead, add `: Unit =` to explicitly declare `yineleKere`'s return type
+[warn]   def yineleKere[T](dizi: Iterable[T])(block: T => Unit) {
+[warn]                                                          ^
+[warn] /Users/ben/src/kojo/git/kojo/src/main/scala/net/kogics/kojo/lite/i18n/trInit.scala:149: procedure syntax is deprecated: instead, add `: Unit =` to explicitly declare `init`'s return type
+[warn]   def init(builtins: CoreBuiltins) {
+[warn]                                    ^
+* The End

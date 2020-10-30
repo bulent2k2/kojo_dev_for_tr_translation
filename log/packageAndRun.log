@@ -1,0 +1,454 @@
+* ben@bulents-mbp git % a build
+build='source /Users/ben/src/kojo/git/packageAndRun.sh'
+* ben@bulents-mbp log % build |& tee packageAndRun.log
+** Build script called from /Users/ben/src/kojo/git/log
+Starting the build in /Users/ben/src/kojo/git/kojo
+openjdk version "1.8.0_265"
+OpenJDK Runtime Environment (build 1.8.0_265-b01)
+Eclipse OpenJ9 VM (build openj9-0.21.0, JRE 1.8.0 Mac OS X amd64-64-Bit Compressed References 20200728_646 (JIT enabled, AOT enabled)
+OpenJ9   - 34cf4c075
+OMR      - 113e54219
+JCL      - c82ff0c20f based on jdk8u265-b01)
++ rm -rf dist
++ ./sbt.sh clean test buildDist
+[info] Loading project definition from /Users/ben/src/kojo/git/kojo/project
+[info] Set current project to Kojo (in build file:/Users/ben/src/kojo/git/kojo/)
+[success] Total time: 0 s, completed Oct 30, 2020 10:15:25 AM
+[info] Updating {file:/Users/ben/src/kojo/git/kojo/}dist...
+[info] Resolving org.scala-lang#scala-compiler;2.13.3 ...
+[info] Resolving org.scala-lang#scala-library;2.13.3 ...
+[info] Resolving org.scala-lang#scala-reflect;2.13.3 ...
+[info] Resolving org.jline#jline;3.15.0 ...
+[info] Resolving net.java.dev.jna#jna;5.3.1 ...
+[info] Resolving com.typesafe.akka#akka-actor_2.13;2.5.29 ...
+[info] Resolving com.typesafe#config;1.3.3 ...
+[info] Resolving org.scala-lang.modules#scala-java8-compat_2.13;0.9.0 ...
+[info] Resolving org.scala-lang.modules#scala-swing_2.13;2.1.1 ...
+[info] Resolving org.scala-lang.modules#scala-xml_2.13;1.2.0 ...
+[info] Resolving org.scala-lang.modules#scala-parser-combinators_2.13;1.1.2 ...
+[info] Resolving com.github.benhutchison#scalaswingcontrib_2.13;1.8 ...
+[info] Resolving org.scala-lang.modules#scala-collection-compat_2.13;2.1.2 ...
+[info] Resolving org.piccolo2d#piccolo2d-core;1.3.1 ...
+[info] Resolving org.piccolo2d#piccolo2d-extras;1.3.1 ...
+[info] Resolving com.vividsolutions#jts;1.13 ...
+[info] Resolving com.h2database#h2;1.3.168 ...
+[info] Resolving org.apache.commons#commons-math3;3.6.1 ...
+[info] Resolving javax.xml.bind#jaxb-api;2.2 ...
+[info] Resolving javax.xml.stream#stax-api;1.0-2 ...
+[info] Resolving javax.activation#activation;1.1 ...
+[info] Resolving com.sun.xml.bind#jaxb-impl;2.2 ...
+[info] Resolving org.scalatest#scalatest_2.13;3.0.8 ...
+[info] Resolving org.scalactic#scalactic_2.13;3.0.8 ...
+[info] Resolving junit#junit;4.10 ...
+[info] Resolving org.hamcrest#hamcrest-core;1.1 ...
+[info] Resolving org.jmock#jmock;2.5.1 ...
+[info] Resolving org.hamcrest#hamcrest-library;1.1 ...
+[info] Resolving org.jmock#jmock-legacy;2.5.1 ...
+[info] Resolving org.objenesis#objenesis;1.0 ...
+[info] Resolving cglib#cglib-nodep;2.1_3 ...
+[info] Resolving org.jmock#jmock-junit4;2.5.1 ...
+[info] Resolving org.scalacheck#scalacheck_2.13;1.14.3 ...
+[info] Done updating.
+[info] Compiling 172 Scala sources and 22 Java sources to /Users/ben/src/kojo/git/kojo/target/scala-2.13/classes...
+[info] Compiling 32 Scala sources to /Users/ben/src/kojo/git/kojo/target/scala-2.13/test-classes...
+[info] UtilsTest:
+[info] - loadLocalizedResourceExistingGerman
+[info] - loadLocalizedResourceExistingOnlyInBaseLanguage
+[info] - loadLocalizedResourceNotExisting
+[info] - loadStringExisting
+[info] - loadStringNull
+[info] - loadStringNotExisting
+[info] PictureEqualsHashTest:
+[info] - living in a set
+[info] - living in a map
+[info] TerminalAnsiCodesTest:
+[info] - test1
+[info] - test2
+[info] - test3
+[info] - test4
+[info] ScalariformTokenMakerTest:
+[info] - test single line val
+[info] - test two line vals - line 2
+[info] - test multi line string - line 1
+[info] - test multi line string - line 2
+[info] - test xml bug 1
+[info] CodeExecutionSupportTest:
+[info] - tabulateNormal
+[info] - tabulateExtraneousWhiteSpace
+[info] - tabulateWithoutArrow
+[info] - tabulateEmpties
+[info] - tabulateNullHead
+[info] - tabulateNullInstructions
+[info] VectorBounceTest:
+[info] - bounce 1
+[info] - bounce 1a
+[info] - bounce 2
+[info] - bounce 3
+[info] - bounce 4
+[info] - bounce 5
+[info] - bounce 5a
+[info] - bounce 6
+[info] - bounce 6a
+[info] - bounce 7
+[info] - bounce 7a
+[info] - bounce 8
+[info] - bounce 8a
+[info] - bounce 9
+[info] RepeatCommandsTest:
+[info] - repeat
+[info] - repeati
+[info] - repeatWhile
+[info] - repeatUntil
+[info] RationalTest:
+[info] - addition
+[info] - subtraction
+[info] - multiplication
+[info] - division
+[info] - commutative law
+[info] - associative law
+[info] - distributive law
+[info] ScalariformTokenMakerTest2:
+[info] - test single line val
+[info] - test two line vals - line 2
+[info] - test multi line string - line 1
+[info] - test multi line string - line 2
+[info] PictureBounceTest:
+[info] - bounce 1
+[info] - bounce ball off stage corner
+[info] - bounce ball off stage corner2
+[info] - bounce rectangle off circle
+[info] HelpTest:
+[info] - lang help miss and hit
+[info] - common help hit
+[info] - common help miss; Tw help hit
+[info] - common help miss; Tw help miss; lang help hit
+[info] - lang help multiple adds
+[info] - lang help multiple adds - 2
+[info] - lang help multiple adds - 3
+[info] - lang help multiple adds - 4
+[info] PictureTest:
+[info] - picture bounds
+[info] - picture translation
+[info] - picture scaling
+[info] - picture scaling after translation
+[info] - picture translation after scaling
+[info] - 3-hpics hp3 bounds
+[info] - 3-hpics hp2 bounds
+[info] - heading 1
+[info] - heading 2
+[info] - position 1
+[info] - position + heading
+[info] - react provides correct me for transforms
+[info] CodeCompletionUtilsTest:
+[info] - lang templates miss and hit
+[info] - builtins templates hit
+[info] - builtins templates miss; Tw templates hit
+[info] - builtins templates miss; Tw templates miss; lang templates hit
+[info] - lang templates multiple add
+[info] TurtleTest2:
+[info] - arc1
+[info] - arcs
+[info] ArcDoubleAngleTest:
+[info] - touching
+[info] - not touching
+[info] - overlapping
+[info] - negative angle touching
+[info] LangMenuFactoryTest:
+[info] - supported languages should contain known supported languages
+[info] - langMenu has icon for supported languages
+[info] - each menu item in langMenu has no icon (for now)
+[info] PictureCollisionTest:
+[info] - box-box non collision
+[info] - box-box collision
+[info] - box-tri non collision
+[info] - box-tri collision
+[info] - box with many boxes collision
+[info] - box with many boxes collision, option version
+[info] - box with many boxes - non collision
+[info] - box with many boxes - non collision, option version
+[info] - hvpics-hvpics non collision
+[info] - hvpics-hvpics collision
+[info] - no self collisions
+[info] GermanAPITest:
+[info] - schleife(n){block} should repeat the block n times
+[info] - schleifeSolange(condition){block} should execute block while condition holds
+[info] - schleifeBis(condition){block} should execute block while condition does not hold
+[info] - schleifeBereich(start, end){i => fn(i)} should call fn with the Int values from start to end
+[info] - schleifeFür[T](iterable){e => fn(e)} should process all elements of iterable
+[info] ScalaTest
+[info] Run completed in 5 seconds, 556 milliseconds.
+[info] Total number of tests run: 106
+[info] Suites: completed 18, aborted 0
+[info] Tests: succeeded 106, failed 0, canceled 0, ignored 0, pending 0
+[info] All tests passed.
+[info] Passed: Total 106, Failed 0, Errors 0, Passed 106
+[success] Total time: 40 s, completed Oct 30, 2020 10:16:04 AM
+[warn] Multiple main classes detected.  Run 'show discoveredMainClasses' to see the list
+[info] Packaging /Users/ben/src/kojo/git/kojo/target/scala-2.13/kojo_2.13-2.9.jar ...
+[info] Done packaging.
+[info] Copying to /Users/ben/src/kojo/git/kojo/dist:
+[info]  * /Users/ben/src/kojo/git/kojo/target/scala-2.13/kojo_2.13-2.9.jar
+[info]  * /Users/ben/src/kojo/git/kojo/lib/jlatexmath.jar
+[info]  * /Users/ben/src/kojo/git/kojo/lib/darcula.jar
+[info]  * /Users/ben/src/kojo/git/kojo/lib/docking-frames-common.jar
+[info]  * /Users/ben/src/kojo/git/kojo/lib/js.jar
+[info]  * /Users/ben/src/kojo/git/kojo/lib/jtidy-4aug2000r7-dev.jar
+[info]  * /Users/ben/src/kojo/git/kojo/lib/AppleJavaExtensions.jar
+[info]  * /Users/ben/src/kojo/git/kojo/lib/jssc.jar
+[info]  * /Users/ben/src/kojo/git/kojo/lib/jdi.jar
+[info]  * /Users/ben/src/kojo/git/kojo/lib/table-layout.jar
+[info]  * /Users/ben/src/kojo/git/kojo/lib/docking-frames-core.jar
+[info]  * /Users/ben/src/kojo/git/kojo/lib/scalariform.jar
+[info]  * /Users/ben/src/kojo/git/kojo/lib/image-filters.jar
+[info]  * /Users/ben/src/kojo/git/kojo/lib/rithica.jar
+[info]  * /Users/ben/src/kojo/git/kojo/lib/rstaui.jar
+[info]  * /Users/ben/src/kojo/git/kojo/lib/jfugue-4.1.jar
+[info]  * /Users/ben/src/kojo/git/kojo/lib/libtiled.jar
+[info]  * /Users/ben/src/kojo/git/kojo/lib/jl1.0.1.jar
+[info]  * /Users/ben/src/kojo/git/kojo/lib/httpunit.jar
+[info]  * /Users/ben/src/kojo/git/kojo/lib/rsyntaxtextarea.jar
+[info]  * /Users/ben/src/kojo/git/kojo/lib/autocomplete.jar
+[info]  * /Users/ben/.ivy2/cache/org.scala-lang/scala-compiler/jars/scala-compiler-2.13.3.jar
+[info]  * /Users/ben/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.13.3.jar
+[info]  * /Users/ben/.ivy2/cache/org.scala-lang/scala-reflect/jars/scala-reflect-2.13.3.jar
+[info]  * /Users/ben/.ivy2/cache/org.jline/jline/jars/jline-3.15.0.jar
+[info]  * /Users/ben/.ivy2/cache/net.java.dev.jna/jna/jars/jna-5.3.1.jar
+[info]  * /Users/ben/.ivy2/cache/com.typesafe.akka/akka-actor_2.13/jars/akka-actor_2.13-2.5.29.jar
+[info]  * /Users/ben/.ivy2/cache/com.typesafe/config/bundles/config-1.3.3.jar
+[info]  * /Users/ben/.ivy2/cache/org.scala-lang.modules/scala-java8-compat_2.13/jars/scala-java8-compat_2.13-0.9.0.jar
+[info]  * /Users/ben/.ivy2/cache/org.scala-lang.modules/scala-swing_2.13/jars/scala-swing_2.13-2.1.1.jar
+[info]  * /Users/ben/.ivy2/cache/org.scala-lang.modules/scala-xml_2.13/bundles/scala-xml_2.13-1.2.0.jar
+[info]  * /Users/ben/.ivy2/cache/org.scala-lang.modules/scala-parser-combinators_2.13/bundles/scala-parser-combinators_2.13-1.1.2.jar
+[info]  * /Users/ben/.ivy2/cache/com.github.benhutchison/scalaswingcontrib_2.13/jars/scalaswingcontrib_2.13-1.8.jar
+[info]  * /Users/ben/.ivy2/cache/org.scala-lang.modules/scala-collection-compat_2.13/bundles/scala-collection-compat_2.13-2.1.2.jar
+[info]  * /Users/ben/.ivy2/cache/org.piccolo2d/piccolo2d-core/bundles/piccolo2d-core-1.3.1.jar
+[info]  * /Users/ben/.ivy2/cache/org.piccolo2d/piccolo2d-extras/bundles/piccolo2d-extras-1.3.1.jar
+[info]  * /Users/ben/.ivy2/cache/com.vividsolutions/jts/jars/jts-1.13.jar
+[info]  * /Users/ben/.ivy2/cache/com.h2database/h2/jars/h2-1.3.168.jar
+[info]  * /Users/ben/.ivy2/cache/org.apache.commons/commons-math3/jars/commons-math3-3.6.1.jar
+[info]  * /Users/ben/.ivy2/cache/javax.xml.bind/jaxb-api/jars/jaxb-api-2.2.jar
+[info]  * /Users/ben/.ivy2/cache/javax.xml.stream/stax-api/jars/stax-api-1.0-2.jar
+[info]  * /Users/ben/.ivy2/cache/javax.activation/activation/jars/activation-1.1.jar
+[info]  * /Users/ben/.ivy2/cache/com.sun.xml.bind/jaxb-impl/jars/jaxb-impl-2.2.jar
+[info]  * /Users/ben/.ivy2/cache/org.scalatest/scalatest_2.13/bundles/scalatest_2.13-3.0.8.jar
+[info]  * /Users/ben/.ivy2/cache/org.scalactic/scalactic_2.13/bundles/scalactic_2.13-3.0.8.jar
+[success] Total time: 1 s, completed Oct 30, 2020 10:16:05 AM
++ rm -rf installerbuild
++ mkdir -p installerbuild/lib
++ cd installer
++ scala cp-staging-jars.scala
+warning: 1 deprecation (since 2.13.3); re-run with -deprecation for details
+../dist/kojo_2.13-2.9.jar -> ../installerbuild/lib/kojo2.jar
+../dist/rsyntaxtextarea.jar -> ../installerbuild/lib/rsyntaxtextarea.jar
+../dist/rstaui.jar -> ../installerbuild/lib/rstaui.jar
+../dist/autocomplete.jar -> ../installerbuild/lib/autocomplete.jar
+../dist/scalariform.jar -> ../installerbuild/lib/scalariform.jar
+../dist/jtidy-4aug2000r7-dev.jar -> ../installerbuild/lib/jtidy-4aug2000r7-dev.jar
+../dist/docking-frames-common.jar -> ../installerbuild/lib/docking-frames-common.jar
+../dist/jl1.0.1.jar -> ../installerbuild/lib/jl1.0.1.jar
+../dist/jlatexmath.jar -> ../installerbuild/lib/jlatexmath.jar
+../dist/jfugue-4.1.jar -> ../installerbuild/lib/jfugue.jar
+../dist/httpunit.jar -> ../installerbuild/lib/httpunit.jar
+../dist/docking-frames-core.jar -> ../installerbuild/lib/docking-frames-core.jar
+../dist/rithica.jar -> ../installerbuild/lib/rithica.jar
+../dist/table-layout.jar -> ../installerbuild/lib/table-layout.jar
+../dist/jdi.jar -> ../installerbuild/lib/jdi.jar
+../dist/image-filters.jar -> ../installerbuild/lib/image-filters.jar
+../dist/jssc.jar -> ../installerbuild/lib/jssc.jar
+../dist/darcula.jar -> ../installerbuild/lib/darcula.jar
+../dist/libtiled.jar -> ../installerbuild/lib/libtiled.jar
+../dist/scala-reflect-2.13.3.jar -> ../installerbuild/lib/scala-reflect.jar
+../dist/akka-actor_2.13-2.5.29.jar -> ../installerbuild/lib/akka-actors.jar
+../dist/scala-swing_2.13-2.1.1.jar -> ../installerbuild/lib/scala-swing.jar
+../dist/scala-xml_2.13-1.2.0.jar -> ../installerbuild/lib/scala-xml.jar
+../dist/scala-parser-combinators_2.13-1.1.2.jar -> ../installerbuild/lib/scala-parser-combinators.jar
+../dist/scalaswingcontrib_2.13-1.8.jar -> ../installerbuild/lib/scalaswingcontrib.jar
+../dist/piccolo2d-core-1.3.1.jar -> ../installerbuild/lib/piccolo2d-core.jar
+../dist/piccolo2d-extras-1.3.1.jar -> ../installerbuild/lib/piccolo2d-extras.jar
+../dist/jts-1.13.jar -> ../installerbuild/lib/jts.jar
+../dist/h2-1.3.168.jar -> ../installerbuild/lib/h2.jar
+../dist/scalatest_2.13-3.0.8.jar -> ../installerbuild/lib/scalatest.jar
+../dist/scalactic_2.13-3.0.8.jar -> ../installerbuild/lib/scalactic.jar
+../dist/scala-library-2.13.3.jar -> ../installerbuild/lib/scala-library.jar
+../dist/scala-compiler-2.13.3.jar -> ../installerbuild/lib/scala-compiler.jar
+../dist/config-1.3.3.jar -> ../installerbuild/lib/config.jar
+../dist/scala-java8-compat_2.13-0.9.0.jar -> ../installerbuild/lib/scala-java8-compat.jar
+../dist/activation-1.1.jar -> ../installerbuild/lib/activation.jar
+../dist/commons-math3-3.6.1.jar -> ../installerbuild/lib/commons-math3.jar
+../dist/jaxb-api-2.2.jar -> ../installerbuild/lib/jaxb-api.jar
+../dist/jaxb-impl-2.2.jar -> ../installerbuild/lib/jaxb-impl.jar
+../dist/stax-api-1.0-2.jar -> ../installerbuild/lib/stax-api.jar
+../dist/js.jar -> ../installerbuild/lib/js.jar
++ cd ..
++ cp -va installer/bin installer/cp-staging-jars.scala installer/create-jarlist.kojo installer/examples installer/icons installer/jarlist.txt installer/licenses installer/winlauncher-for-zip.xml installerbuild/
+installer/bin -> installerbuild/bin
+installer/bin/kojo -> installerbuild/bin/kojo
+installer/bin/kojo.cmd -> installerbuild/bin/kojo.cmd
+installer/bin/kojo.exe -> installerbuild/bin/kojo.exe
+installer/cp-staging-jars.scala -> installerbuild/cp-staging-jars.scala
+installer/create-jarlist.kojo -> installerbuild/create-jarlist.kojo
+installer/examples -> installerbuild/examples
+installer/examples/tiledgame -> installerbuild/examples/tiledgame
+installer/examples/tiledgame/level1.tmx -> installerbuild/examples/tiledgame/level1.tmx
+installer/examples/tiledgame/game.kojo.installed -> installerbuild/examples/tiledgame/game.kojo.installed
+installer/examples/tiledgame/tiles.png -> installerbuild/examples/tiledgame/tiles.png
+installer/examples/tiledgame/player.png -> installerbuild/examples/tiledgame/player.png
+installer/icons -> installerbuild/icons
+installer/icons/kojo32.png -> installerbuild/icons/kojo32.png
+installer/icons/kojo64w.png -> installerbuild/icons/kojo64w.png
+installer/icons/kojo48.ico -> installerbuild/icons/kojo48.ico
+installer/icons/kojo48w.png -> installerbuild/icons/kojo48w.png
+installer/icons/kojo64.png -> installerbuild/icons/kojo64.png
+installer/icons/kojo48.png -> installerbuild/icons/kojo48.png
+installer/icons/kojo48w.ico -> installerbuild/icons/kojo48w.ico
+installer/icons/kojo128.png -> installerbuild/icons/kojo128.png
+installer/icons/kojo16.png -> installerbuild/icons/kojo16.png
+installer/jarlist.txt -> installerbuild/jarlist.txt
+installer/licenses -> installerbuild/licenses
+installer/licenses/rhino-LICENSE.txt -> installerbuild/licenses/rhino-LICENSE.txt
+installer/licenses/tiled-license.txt -> installerbuild/licenses/tiled-license.txt
+installer/licenses/Kojo-license.txt -> installerbuild/licenses/Kojo-license.txt
+installer/licenses/table-layout.txt -> installerbuild/licenses/table-layout.txt
+installer/licenses/doodle-LICENSE.txt -> installerbuild/licenses/doodle-LICENSE.txt
+installer/licenses/grouppanel-license.txt -> installerbuild/licenses/grouppanel-license.txt
+installer/licenses/scratch-license.txt -> installerbuild/licenses/scratch-license.txt
+installer/licenses/Kojo-examples-license.txt -> installerbuild/licenses/Kojo-examples-license.txt
+installer/licenses/scalariform-license.txt -> installerbuild/licenses/scalariform-license.txt
+installer/licenses/RSyntaxTextArea.License.txt -> installerbuild/licenses/RSyntaxTextArea.License.txt
+installer/licenses/darcula-license.txt -> installerbuild/licenses/darcula-license.txt
+installer/licenses/turtle-image-license.txt -> installerbuild/licenses/turtle-image-license.txt
+installer/licenses/docking-frames-license.txt -> installerbuild/licenses/docking-frames-license.txt
+installer/licenses/jlayer-license.txt -> installerbuild/licenses/jlayer-license.txt
+installer/licenses/jssc-license.txt -> installerbuild/licenses/jssc-license.txt
+installer/licenses/jlatexmath-license.txt -> installerbuild/licenses/jlatexmath-license.txt
+installer/licenses/delaunay-triangulator-license.txt -> installerbuild/licenses/delaunay-triangulator-license.txt
+installer/licenses/scala-license.txt -> installerbuild/licenses/scala-license.txt
+installer/licenses/jhlabs-filters-license.txt -> installerbuild/licenses/jhlabs-filters-license.txt
+installer/licenses/openjdk-license.txt -> installerbuild/licenses/openjdk-license.txt
+installer/licenses/JTS-license.txt -> installerbuild/licenses/JTS-license.txt
+installer/licenses/processing-license.txt -> installerbuild/licenses/processing-license.txt
+installer/licenses/akka-license.txt -> installerbuild/licenses/akka-license.txt
+installer/licenses/httpunit-license.txt -> installerbuild/licenses/httpunit-license.txt
+installer/licenses/geogebra-license.txt -> installerbuild/licenses/geogebra-license.txt
+installer/licenses/scalatest-LICENSE.txt -> installerbuild/licenses/scalatest-LICENSE.txt
+installer/licenses/h2-license.txt -> installerbuild/licenses/h2-license.txt
+installer/licenses/jfugue-license.txt -> installerbuild/licenses/jfugue-license.txt
+installer/licenses/hamcrest-license.txt -> installerbuild/licenses/hamcrest-license.txt
+installer/licenses/piccolo-license.txt -> installerbuild/licenses/piccolo-license.txt
+installer/licenses/Kojoi-license.txt -> installerbuild/licenses/Kojoi-license.txt
+installer/winlauncher-for-zip.xml -> installerbuild/winlauncher-for-zip.xml
++ cd installerbuild
++ rm cp-staging-jars.scala create-jarlist.kojo jarlist.txt winlauncher-for-zip.xml
++ rm -rf Uninstaller
++ cp licenses/Kojo-license.txt .
++ cd ..
++ rm -rf Kojo-z
++ mv installerbuild Kojo-z
++ rm Kojo.zip
++ zip -r Kojo.zip Kojo-z/Kojo-license.txt Kojo-z/bin Kojo-z/examples Kojo-z/icons Kojo-z/lib Kojo-z/licenses
+  adding: Kojo-z/Kojo-license.txt (deflated 65%)
+  adding: Kojo-z/bin/ (stored 0%)
+  adding: Kojo-z/bin/kojo (deflated 30%)
+  adding: Kojo-z/bin/kojo.cmd (deflated 34%)
+  adding: Kojo-z/bin/kojo.exe (deflated 57%)
+  adding: Kojo-z/examples/ (stored 0%)
+  adding: Kojo-z/examples/tiledgame/ (stored 0%)
+  adding: Kojo-z/examples/tiledgame/level1.tmx (deflated 39%)
+  adding: Kojo-z/examples/tiledgame/game.kojo.installed (deflated 74%)
+  adding: Kojo-z/examples/tiledgame/tiles.png (deflated 5%)
+  adding: Kojo-z/examples/tiledgame/player.png (deflated 13%)
+  adding: Kojo-z/icons/ (stored 0%)
+  adding: Kojo-z/icons/kojo32.png (stored 0%)
+  adding: Kojo-z/icons/kojo64w.png (stored 0%)
+  adding: Kojo-z/icons/kojo48.ico (deflated 74%)
+  adding: Kojo-z/icons/kojo48w.png (stored 0%)
+  adding: Kojo-z/icons/kojo64.png (stored 0%)
+  adding: Kojo-z/icons/kojo48.png (stored 0%)
+  adding: Kojo-z/icons/kojo48w.ico (deflated 72%)
+  adding: Kojo-z/icons/kojo128.png (stored 0%)
+  adding: Kojo-z/icons/kojo16.png (stored 0%)
+  adding: Kojo-z/lib/ (stored 0%)
+  adding: Kojo-z/lib/jts.jar (deflated 11%)
+  adding: Kojo-z/lib/jlatexmath.jar (deflated 6%)
+  adding: Kojo-z/lib/darcula.jar (deflated 11%)
+  adding: Kojo-z/lib/jaxb-impl.jar (deflated 11%)
+  adding: Kojo-z/lib/commons-math3.jar (deflated 11%)
+  adding: Kojo-z/lib/scala-library.jar (deflated 7%)
+  adding: Kojo-z/lib/docking-frames-common.jar (deflated 15%)
+  adding: Kojo-z/lib/scalactic.jar (deflated 6%)
+  adding: Kojo-z/lib/scala-parser-combinators.jar (deflated 7%)
+  adding: Kojo-z/lib/scala-compiler.jar (deflated 5%)
+  adding: Kojo-z/lib/activation.jar (deflated 8%)
+  adding: Kojo-z/lib/js.jar (deflated 5%)
+  adding: Kojo-z/lib/jtidy-4aug2000r7-dev.jar (deflated 11%)
+  adding: Kojo-z/lib/scalaswingcontrib.jar (deflated 9%)
+  adding: Kojo-z/lib/jaxb-api.jar (deflated 13%)
+  adding: Kojo-z/lib/jssc.jar (deflated 2%)
+  adding: Kojo-z/lib/jdi.jar (deflated 12%)
+  adding: Kojo-z/lib/config.jar (deflated 9%)
+  adding: Kojo-z/lib/piccolo2d-core.jar (deflated 8%)
+  adding: Kojo-z/lib/table-layout.jar (deflated 9%)
+  adding: Kojo-z/lib/docking-frames-core.jar (deflated 13%)
+  adding: Kojo-z/lib/scalariform.jar (deflated 5%)
+  adding: Kojo-z/lib/piccolo2d-extras.jar (deflated 11%)
+  adding: Kojo-z/lib/scala-swing.jar (deflated 7%)
+  adding: Kojo-z/lib/image-filters.jar (deflated 8%)
+  adding: Kojo-z/lib/h2.jar (deflated 4%)
+  adding: Kojo-z/lib/kojo2.jar (deflated 3%)
+  adding: Kojo-z/lib/rithica.jar (deflated 7%)
+  adding: Kojo-z/lib/scala-reflect.jar (deflated 6%)
+  adding: Kojo-z/lib/rstaui.jar (deflated 15%)
+  adding: Kojo-z/lib/libtiled.jar (deflated 5%)
+  adding: Kojo-z/lib/jl1.0.1.jar (deflated 9%)
+  adding: Kojo-z/lib/scalatest.jar (deflated 6%)
+  adding: Kojo-z/lib/jfugue.jar (deflated 7%)
+  adding: Kojo-z/lib/httpunit.jar (deflated 9%)
+  adding: Kojo-z/lib/stax-api.jar (deflated 22%)
+  adding: Kojo-z/lib/scala-xml.jar (deflated 5%)
+  adding: Kojo-z/lib/akka-actors.jar (deflated 5%)
+  adding: Kojo-z/lib/rsyntaxtextarea.jar (deflated 6%)
+  adding: Kojo-z/lib/autocomplete.jar (deflated 12%)
+  adding: Kojo-z/lib/scala-java8-compat.jar (deflated 12%)
+  adding: Kojo-z/licenses/ (stored 0%)
+  adding: Kojo-z/licenses/rhino-LICENSE.txt (deflated 68%)
+  adding: Kojo-z/licenses/tiled-license.txt (deflated 48%)
+  adding: Kojo-z/licenses/Kojo-license.txt (deflated 65%)
+  adding: Kojo-z/licenses/table-layout.txt (deflated 65%)
+  adding: Kojo-z/licenses/doodle-LICENSE.txt (deflated 65%)
+  adding: Kojo-z/licenses/grouppanel-license.txt (deflated 47%)
+  adding: Kojo-z/licenses/scratch-license.txt (deflated 48%)
+  adding: Kojo-z/licenses/Kojo-examples-license.txt (deflated 41%)
+  adding: Kojo-z/licenses/scalariform-license.txt (deflated 41%)
+  adding: Kojo-z/licenses/RSyntaxTextArea.License.txt (deflated 48%)
+  adding: Kojo-z/licenses/darcula-license.txt (deflated 65%)
+  adding: Kojo-z/licenses/turtle-image-license.txt (deflated 41%)
+  adding: Kojo-z/licenses/docking-frames-license.txt (deflated 65%)
+  adding: Kojo-z/licenses/jlayer-license.txt (deflated 65%)
+  adding: Kojo-z/licenses/jssc-license.txt (deflated 66%)
+  adding: Kojo-z/licenses/jlatexmath-license.txt (deflated 49%)
+  adding: Kojo-z/licenses/delaunay-triangulator-license.txt (deflated 41%)
+  adding: Kojo-z/licenses/scala-license.txt (deflated 47%)
+  adding: Kojo-z/licenses/jhlabs-filters-license.txt (deflated 65%)
+  adding: Kojo-z/licenses/openjdk-license.txt (deflated 63%)
+  adding: Kojo-z/licenses/JTS-license.txt (deflated 65%)
+  adding: Kojo-z/licenses/processing-license.txt (deflated 65%)
+  adding: Kojo-z/licenses/akka-license.txt (deflated 65%)
+  adding: Kojo-z/licenses/httpunit-license.txt (deflated 41%)
+  adding: Kojo-z/licenses/geogebra-license.txt (deflated 67%)
+  adding: Kojo-z/licenses/scalatest-LICENSE.txt (deflated 65%)
+  adding: Kojo-z/licenses/h2-license.txt (deflated 38%)
+  adding: Kojo-z/licenses/jfugue-license.txt (deflated 66%)
+  adding: Kojo-z/licenses/hamcrest-license.txt (deflated 47%)
+  adding: Kojo-z/licenses/piccolo-license.txt (deflated 49%)
+  adding: Kojo-z/licenses/Kojoi-license.txt (deflated 65%)
+~/src/kojo/git/log
+Updating java to use from env (in /Users/ben/src/kojo/git/log)
+/Users/ben/src/kojo/git/kojo/Kojo-z/bin/kojo is ready to run.
+Starting kojo from /Users/ben/tmp/kojo
+~/src/kojo/git/log
+11.0.7
+[INFO] Running first Kojo instance with args: []
+[INFO] Java Home: /Applications/Kojo Learning Environment.app/Contents/PlugIns/jre.bundle/Contents/Home
+Java VM args: -client -Xms128m -Xmx2g -Xss1m -Dapple.laf.useScreenMenuBar=true -Dawt.useSystemAAFontSettings=lcd --add-opens java.desktop/javax.swing.text.html=ALL-UNNAMED -Dsun.java2d.uiScale.enabled=false -Dapple.awt.graphics.UseQuartz=true net.kogics.kojo.lite.Main 
+[INFO] Logging has been redirected to: /Users/ben/.kojo/lite/log/kojo0.log
+* The End

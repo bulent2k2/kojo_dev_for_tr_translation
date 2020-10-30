@@ -1,0 +1,139 @@
+* after makezip trick: (See: ~/src/kojo/README.makezip)
+
+Kojo 2.9
+Version: 2.9.07 r1
+Build date: 29 September 2020
+Java version: 11.0.7+10-b765.65; x86_64.
+Scala version: 2.13.3
+Copyright © 2009-2020 Lalit Pant (pant.lalit@gmail.com) and the Kojo Dev Team.
+Please visit http://www.kogics.net/kojo for more information about Kojo.
+
+Kojo Contributors:
+Lalit Pant
+Björn Regnell
+Peter Lewerin
+Phil Bagwell
+Tanu Nayal
+Vibha Pant
+Anusha Pant
+Nikhil Pant
+Sami Jaber
+Aditya Pant
+Jerzy Redlarski
+Saurabh Kapoor
+Mushtaq Ahmed
+Ilango
+Pierre Couillard
+Audrey Neveu
+Mikołaj Sochacki
+Eric Zoerner
+Jacco Huysmans
+Christoph Knabe
+Vipul Pandey
+Aleksei Loginov
+Massimo Maria Ghisalberti
+Luka Volaric
+Marcus Klang
+Bulent Basaran
+
+Kojo is licensed under The GNU General Public License (GPL). The full text of the GPL is available at: http://www.gnu.org/licenses/gpl.html  Kojo runs on the Java Platform.  The list of third-party software used by Kojo 2.x includes:
+
+The Scala Programming Language (http://www.scala-lang.org)
+Docking Frames (http://dock.javaforge.com/) for providing multiple, dockable windows
+RSyntaxTextArea (http://fifesoft.com/rsyntaxtextarea/) for Syntax Highlighting and Code Completion within the Script Editor
+Scalariform (https://github.com/mdr/scalariform/) for Code Formatting within the Script Editor
+Piccolo2D (http://www.piccolo2d.org) for 2D Graphics
+JTS Topology Suite (http://tsusiatsoftware.net/jts/main.html) for Collision Detection
+JFugue (http://www.jfugue.org) for computer generated music
+The H2 Database Engine (http://www.h2database.com) for storing history
+GeoGebra (http://www.geogebra.org) for Interactive Geometry and Algebra
+HttpUnit (http://httpunit.sourceforge.net/) for HTTP communication
+JLaTeXMath (http://forge.scilab.org/index.php/p/jlatexmath/) to display LaTeX commands
+JLayer (http://www.javazoom.net/javalayer/javalayer.html) to play MP3 files
+Table Layout (https://java.net/projects/tablelayout) for Arithmetic Aerobics
+The Netbeans Platform (http://www.netbeans.org) for some Script Editor Icons
+The Scratch Project (http://scratch.mit.edu) for some Media files
+The OpenJDK Project (http://openjdk.java.net/) for Tracing support
+JHLabs image filters (http://www.jhlabs.com/ip/filters/) for Picture effects
+jSSC (http://code.google.com/p/java-simple-serial-connector/) for serial port communication
+The Gargi font (http://savannah.nongnu.org/projects/gargi) for Devanagari support
+The Doodle project (https://github.com/underscoreio/doodle) for rich color support
+ScalaSwingContrib (https://github.com/benhutchison/ScalaSwingContrib) for UI layout
+Scalatest (http://www.scalatest.org/) for testing
+Akka (https://akka.io/) for concurrency
+Darcula (https://github.com/bulenkov/Darcula) for the dark Kojo theme
+libTiled (https://www.mapeditor.org/) to load game level files created with the Tiled Map Editor
+Processing (https://processing.org/) for perlin noise and curved shapes
+Delaunay Triangulator (https://github.com/jdiemke/delaunay-triangulator) for triangulation of points
+Java implementation of HSLuv (https://github.com/hsluv/hsluv-java) for a perceptually uniform color space
+Rhino (https://developer.mozilla.org/en-US/docs/Mozilla/Projects/Rhino) for the Code Exchange interface
+
+* My build: (running with kojo_cd; ./sbt.sh run; cd -)
+
+Kojo 2.9
+Version: 2.9.07 r1
+Build date: 29 September 2020
+Java version: 1.8.0_265-b01; x86_64.
+Scala version: 2.13.3
+Copyright © 2009-2020 Lalit Pant (pant.lalit@gmail.com) and the Kojo Dev Team.
+Please visit http://www.kogics.net/kojo for more information about Kojo.
+
+Kojo Contributors:
+Lalit Pant
+Björn Regnell
+Peter Lewerin
+Phil Bagwell
+Tanu Nayal
+Vibha Pant
+Anusha Pant
+Nikhil Pant
+Sami Jaber
+Aditya Pant
+Jerzy Redlarski
+Saurabh Kapoor
+Mushtaq Ahmed
+Ilango
+Pierre Couillard
+Audrey Neveu
+Mikołaj Sochacki
+Eric Zoerner
+Jacco Huysmans
+Christoph Knabe
+Vipul Pandey
+Aleksei Loginov
+Massimo Maria Ghisalberti
+Luka Volaric
+Marcus Klang
+Bulent Basaran
+
+Kojo is licensed under The GNU General Public License (GPL). The full text of the GPL is available at: http://www.gnu.org/licenses/gpl.html  Kojo runs on the Java Platform.  The list of third-party software used by Kojo 2.x includes:
+
+The Scala Programming Language (http://www.scala-lang.org)
+Docking Frames (http://dock.javaforge.com/) for providing multiple, dockable windows
+RSyntaxTextArea (http://fifesoft.com/rsyntaxtextarea/) for Syntax Highlighting and Code Completion within the Script Editor
+Scalariform (https://github.com/mdr/scalariform/) for Code Formatting within the Script Editor
+Piccolo2D (http://www.piccolo2d.org) for 2D Graphics
+JTS Topology Suite (http://tsusiatsoftware.net/jts/main.html) for Collision Detection
+JFugue (http://www.jfugue.org) for computer generated music
+The H2 Database Engine (http://www.h2database.com) for storing history
+GeoGebra (http://www.geogebra.org) for Interactive Geometry and Algebra
+HttpUnit (http://httpunit.sourceforge.net/) for HTTP communication
+JLaTeXMath (http://forge.scilab.org/index.php/p/jlatexmath/) to display LaTeX commands
+JLayer (http://www.javazoom.net/javalayer/javalayer.html) to play MP3 files
+Table Layout (https://java.net/projects/tablelayout) for Arithmetic Aerobics
+The Netbeans Platform (http://www.netbeans.org) for some Script Editor Icons
+The Scratch Project (http://scratch.mit.edu) for some Media files
+The OpenJDK Project (http://openjdk.java.net/) for Tracing support
+JHLabs image filters (http://www.jhlabs.com/ip/filters/) for Picture effects
+jSSC (http://code.google.com/p/java-simple-serial-connector/) for serial port communication
+The Gargi font (http://savannah.nongnu.org/projects/gargi) for Devanagari support
+The Doodle project (https://github.com/underscoreio/doodle) for rich color support
+ScalaSwingContrib (https://github.com/benhutchison/ScalaSwingContrib) for UI layout
+Scalatest (http://www.scalatest.org/) for testing
+Akka (https://akka.io/) for concurrency
+Darcula (https://github.com/bulenkov/Darcula) for the dark Kojo theme
+libTiled (https://www.mapeditor.org/) to load game level files created with the Tiled Map Editor
+Processing (https://processing.org/) for perlin noise and curved shapes
+Delaunay Triangulator (https://github.com/jdiemke/delaunay-triangulator) for triangulation of points
+Java implementation of HSLuv (https://github.com/hsluv/hsluv-java) for a perceptually uniform color space
+Rhino (https://developer.mozilla.org/en-US/docs/Mozilla/Projects/Rhino) for the Code Exchange interface

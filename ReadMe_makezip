@@ -1,0 +1,44 @@
+* This is all precursor to the new automation script: packageAndRun.sh
+* cmds -- See below for comments
+% cd ~/src/kojo/git/kojo
+% ./makezip.sh
+% cd -
+% source ~/src/kojo/git/use_kosher_java.sh
+% cd ~/tmp; kojo; cd -
+* To Build/Test and Package Kojo, do:
+
+% cd ~/src/kojo/git/kojo
+% ./makezip.sh
+
+See sample log in ./kojo/log/makezip.log
+
+To run from the package, just do:
+% cd ~/tmp; kojo
+
+But first, update the script to use the kosher java from the OS (my macbook), 
+not the one we used for building kojo. This fixes Turkish encoding issue with old java.
+
+To do that, run:
+% source ~/src/kojo/git/use_kosher_java.sh
+
+* Here are some details:
+
+We want to use the java provided by my computer (not the one in my build):
+It is in:
+/Applications/Kojo Learning Environment.app/Contents/PlugIns/jre.bundle/Contents/Home/bin
+
+I need a softlink to it because I don't know how to escape the spaces in the dir above.
+So, I did the following:
+
+cd ~/src/kojo/git
+ln -s /Applications/Kojo\ Learning\ Environment.app kojo_root
+
+Now, to build and package Kojo, do:
+
+cd ~/src/kojo/git/kojo/Kojo-z/bin/
+
+EDIT: ~/src/kojo/git/kojo/Kojo-z/bin/kojo
+To set:
+JAVA=~/src/kojo/git/kojo_root/Contents/PlugIns/jre.bundle/Contents/Home/bin/java
+
+* The End

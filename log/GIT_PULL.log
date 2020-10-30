@@ -1,0 +1,44 @@
+ben@Bulents-MacBook-Pro kojo % git pull
+git pull
+Updating cbade134..eb8c12ab
+error: Your local changes to the following files would be overwritten by merge:
+	src/main/scala/net/kogics/kojo/lite/LangMenuFactory.scala
+Please commit your changes or stash them before you merge.
+Aborting
+ben@Bulents-MacBook-Pro kojo % git status
+git status
+On branch master
+Your branch is behind 'origin/master' by 10 commits, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	new file:   "src/main/resources/samples/tr/aga\303\2470.kojo"
+	new file:   src/main/resources/samples/tr/sarmal.kojo
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   l10n-level2/level2_tr.properties
+	modified:   src/main/resources/challenge/get-started.kojo
+	modified:   src/main/scala/net/kogics/kojo/lite/LangMenuFactory.scala
+
+ben@Bulents-MacBook-Pro kojo % git restore src/main/scala/net/kogics/kojo/lite/LangMenuFactory.scala
+git restore src/main/scala/net/kogics/kojo/lite/LangMenuFactory.scala
+ben@Bulents-MacBook-Pro kojo % git pull
+git pull
+Updating cbade134..eb8c12ab
+Fast-forward
+ README.md                                                 |   2 +-
+ l10n-level2/gen-level2.kojo                               |   6 ++-
+ localization.md                                           |  47 +++++++++++++++++++++++
+ src/main/resources/i18n/initk/tr.tw.kojo                  |  24 ++++++++++++
+ src/main/scala/net/kogics/kojo/lite/AppMenu.scala         |   1 +
+ src/main/scala/net/kogics/kojo/lite/LangMenuFactory.scala |   5 ++-
+ src/main/scala/net/kogics/kojo/lite/i18n/LangInit.scala   |   2 +
+ src/main/scala/net/kogics/kojo/lite/i18n/trInit.scala     | 278 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 8 files changed, 360 insertions(+), 5 deletions(-)
+ create mode 100644 localization.md
+ create mode 100644 src/main/resources/i18n/initk/tr.tw.kojo
+ create mode 100644 src/main/scala/net/kogics/kojo/lite/i18n/trInit.scala
+ben@Bulents-MacBook-Pro kojo % 
