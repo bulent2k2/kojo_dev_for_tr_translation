@@ -6,8 +6,10 @@ Level 2: ~/src/kojo/git/kojo/l10n-level2/level2_tr.properties
 1- forked at GitHub
 2- git clone https://github.com/bulent2k2/kojo.git
    cd kojo
+# now in: ~/src/kojo/git/kojo/
 3- YAZ YAZILIMCIK!
    # pull request from lilit's repo to my fork (@GitHub)
+   # (When the head repo (lalit/kojo) is ahead, pull into my own repo (bulent2k2/kojo)
    # then, update my clone:  see log: 
    git pull 
 4- Just run alias build to compile/test/run

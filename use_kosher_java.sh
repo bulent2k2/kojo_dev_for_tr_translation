@@ -2,10 +2,11 @@
 # See ~/src/kojo/git/README.makezip
 
 old='JAVA=java'
+# backslashes needed for sed to work below
 new='JAVA=\/Users\/ben\/src\/kojo\/git\/java'
 
 dir=/Users/ben/src/kojo/git/kojo/Kojo-z/bin
-rm -f $out $dir/tmp
+rm -f $dir/kojo.org $dir/tmp
 cp $dir/kojo $dir/kojo.org
 sed "s/$old/$new/" $dir/kojo > $dir/tmp
 mv -f $dir/tmp $dir/kojo
