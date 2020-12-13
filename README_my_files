@@ -1,0 +1,11 @@
+~/src/kojo/git/kojo/localization.md
+~/src/kojo/git/kojo/l10n-level2/level2_tr.properties
+~/src/kojo/git/kojo/src/main/
+~/src/kojo/git/kojo/src/main/scala/net/kogics/kojo/lite/i18n/trInit.scala
+~/src/kojo/git/kojo/src/main/resources/i18n/initk/tr.tw.kojo
+~/src/kojo/git/kojo/src/main/resources/net/kogics/kojo/lite/Bundle_tr.properties
+~/src/kojo/git/kojo/src/main/resources/samples/tr/scala-tutorial.kojo
+
+
+~/src/kojo/git/kojo/src/main/scala/net/kogics/kojo/lite/CoreBuiltins.scala
+~/src/kojo/git/kojo/src/main/scala/net/kogics/kojo/xscala/Help.scala
