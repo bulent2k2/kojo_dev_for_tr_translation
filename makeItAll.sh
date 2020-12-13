@@ -6,7 +6,7 @@
 
 cwd=`pwd`
 # use alias build which sources this: /Users/ben/bin/makeItAll.sh
-echo "Build script called from $cwd"
+echo "Build script (~/src/kojo/git/makeItAll.sh) called from $cwd"
 kojo_root=/Users/ben/src/kojo
 cd $kojo_root/git/kojo
 echo "Starting the build in `pwd`"
