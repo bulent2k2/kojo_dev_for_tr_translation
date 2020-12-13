@@ -1,0 +1,38 @@
+ColorMaker (no help)
+
+Color(r, g, b, opac) - Creates a color with the given red, green, blue, and opacity (optional) values.
+ColorG(x1, y1, color1, x2, y2, color2, cyclic) - Creates a color gradient for filling shapes. The cyclic value is optional.
+ColorHSB(h, s, b) - Creates a color with the given Hue (0-360), Saturation (0-100), and Brighness (0-100) values.
+
+ColorLinearG(x1, y1, x2, y2, distribution, colors, cyclic) - creates a linear color gradient. (x1, y1) is the start point of the gradient and (x2, y2) is the end point. The distribution of colors between these points is specified by the given distribution and colors. If cyclic is true, the gradient is reflected beyond the end point.  Example:  
+def sq(n: Int) {
+    repeat(4) {
+        forward(n)
+        right()
+    }
+}
+
+clear()
+setAnimationDelay(100)
+setFillColor(
+    ColorLinearG(0, 0, 100, 100, Seq(0.0, 0.3, 0.6, 1.0), Seq(blue, yellow, orange, green), true))
+sq(100)
+setPosition(100, 100)
+sq(100)
+
+
+ColorRadialG(x, y, radius, distribution, colors, cyclic) - creates a circular color gradient. (x, y) is the start point of the gradient. The gradient extends radially in a circle with the given radius. The distribution of colors within this circle is specified by the given distribution and colors. If cyclic is true, the gradient is reflected beyond the circle.  Example:  
+def sq(n: Int) {
+    repeat(4) {
+        forward(n)
+        right()
+    }
+}
+
+clear()
+setAnimationDelay(100)
+setFillColor(
+    ColorRadialG(0, 0, 100, Seq(0.0, 0.3, 0.6, 1.0), Seq(blue, yellow, orange, green), true))
+sq(100)
+setPosition(100, 100)
+sq(100)
