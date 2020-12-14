@@ -1,0 +1,7 @@
+#!/bin/bash
+JAVA=/Users/ben/src/kojo/git/java
+for f in /Users/ben/src/kojo/git/kojo/dist/*
+do
+  CLASSPATH=${CLASSPATH}:$f
+done
+$JAVA -cp ${CLASSPATH} net.kogics.kojo.lite.DesktopMain $*
