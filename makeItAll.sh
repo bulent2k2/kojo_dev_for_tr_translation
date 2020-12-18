@@ -29,4 +29,4 @@ echo $dir/kojo is ready to run.
 cd $cwd
 echo "Starting kojo from `pwd`"
 #kojo &
-/Users/ben/src/kojo/git/kojo_exe
+/Users/ben/src/kojo/git/kojo_exe &
