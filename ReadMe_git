@@ -41,3 +41,22 @@ git push --set-upstream origin master
 Asked for a username and for password, used my token:
 Username for 'https://github.com': bulent2k2
 Password for 'https://bulent2k2@github.com': f697fdb9199685418559fc78c1ac0656b57afb66
+
+
+* Using Magit :-)
+(cd "kojo")
+Updating 05dc6bf8..48b4c661
+Fast-forward
+ installer.i4j/kojo.install4j                       |   2 +-
+ .../net/kogics/kojo/lite/Bundle_es.properties      | 290 +++++++++++++++++++++
+ src/main/scala/net/kogics/kojo/lite/AppMenu.scala  |   5 +-
+ src/main/scala/net/kogics/kojo/lite/JoyStick.scala |  18 +-
+ .../net/kogics/kojo/lite/LangMenuFactory.scala     |   5 +-
+ .../scala/net/kogics/kojo/lite/ScriptLoader.scala  |   4 +-
+ src/main/scala/net/kogics/kojo/lite/StubMain.scala |  21 +-
+ src/main/scala/net/kogics/kojo/lite/Versions.scala |   4 +-
+ src/main/scala/net/kogics/kojo/util/Utils.scala    |  31 ++-
+ .../net/kogics/kojo/xscala/ScalaCodeRunner2.scala  |  32 ++-
+ 10 files changed, 375 insertions(+), 37 deletions(-)
+ create mode 100644 src/main/resources/net/kogics/kojo/lite/Bundle_es.properties
+* The End

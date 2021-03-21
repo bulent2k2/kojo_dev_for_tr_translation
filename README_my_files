@@ -1,11 +1,71 @@
+* Find/Replace turkish translation/chars ~/src/kojo/git/kojo/lib/rstaui.jar:org/fife/rsta/ui/search/Search_tr.properties
+* Picture
+
+.   transforms.scala      10924 Scala            ~/src/kojo/git/kojo/src/main/scala/net/kogics/kojo/picture/transforms.scala
+trait Transformer extends Picture with CorePicOps2
+    Picture.scala          5217 Scala            ~/src/kojo/git/kojo/src/main/scala/net/kogics/kojo/core/Picture.scala
+trait Picture extends InputAware
+    trInit.scala          28975 Scala            ~/src/kojo/git/kojo/src/main/scala/net/kogics/kojo/lite/i18n/trInit.scala
+    package.scala         13330 Scala            ~/src/kojo/git/kojo/src/main/scala/net/kogics/kojo/picture/package.scala
+    pics.scala            24734 Scala            ~/src/kojo/git/kojo/src/main/scala/net/kogics/kojo/picture/pics.scala
+trait InputAware
+.   InputAware.scala       4198 Scala            ~/src/kojo/git/kojo/src/main/scala/net/kogics/kojo/core/InputAware.scala
+
+~/src/kojo/git/kojo/src/main/scala/net/kogics/kojo/core/Picture.scala
+** From Lalit
+*** CoreBuiltins.scala
+~/src/kojo/git/kojo/src/main/scala/net/kogics/kojo/lite/CoreBuiltins.scala
+~/src/kojo/git/kojo/src/main/scala/net/kogics/kojo/lite/Builtins.scala
+
+** in: ~/src/kojo/git/kojo/src/main/scala/net/kogics/kojo/core/package.scala
+package net.kogics.kojo
+package object core {
+  type Painter = Turtle => Unit
+}
+
+** in: ~/src/kojo/git/kojo/src/main/scala/net/kogics/kojo/picture/pics.scala
+object Pic {
+  def apply(painter: Painter)(implicit canvas: SCanvas) = new Pic(painter)
+}
+
+~/src/kojo/git/kojo/src/main/scala/net/kogics/kojo/picture/package.scala
+~/src/kojo/git/kojo/src/main/scala/net/kogics/kojo/lite/Builtins.scala
+object Picture in: ~/src/kojo/git/kojo/grep_object
+~/src/kojo/git/kojo/src/main/scala/net/kogics/kojo/core/Picture.scala
+~/src/kojo/git/kojo/src/main/scala/net/kogics/kojo/core/InputAware.scala
+~/src/kojo/git/kojo/src/main/scala/net/kogics/kojo/lite/CoreBuiltins.scala
+~/src/kojo/resim/giris.kojo
+
+* Older
+~/src/kojo/git/kojo/src/main/scala/net/kogics/kojo/xscala/Help.scala
 ~/src/kojo/git/kojo/localization.md
 ~/src/kojo/git/kojo/l10n-level2/level2_tr.properties
 ~/src/kojo/git/kojo/src/main/
-~/src/kojo/git/kojo/src/main/scala/net/kogics/kojo/lite/i18n/trInit.scala
+~/src/kojo/git/kojo/src/main/scala/net/kogics/kojo/lite/AppMenu.scala
+             loadAndRunResourceNEL("/samples/", file)
+    // mathActivityMenu.add(menuItemFor("S_AngleExperiment", "angle-experiment.kojo"))
+    toolsMenu.add(menuItemFor("S_InstructionPalette", "instruction-palette.kojo"))
+** ~/src/kojo/git/kojo/src/main/scala/net/kogics/kojo/lite/i18n/trInit.scala
 ~/src/kojo/git/kojo/src/main/resources/i18n/initk/tr.tw.kojo
 ~/src/kojo/git/kojo/src/main/resources/net/kogics/kojo/lite/Bundle_tr.properties
 ~/src/kojo/git/kojo/src/main/resources/samples/tr/scala-tutorial.kojo
 
 
 ~/src/kojo/git/kojo/src/main/scala/net/kogics/kojo/lite/CoreBuiltins.scala
+~/src/kojo/git/kojo/src/main/scala/net/kogics/kojo/lite/Builtins.scala   e.g. canvasBounds
 ~/src/kojo/git/kojo/src/main/scala/net/kogics/kojo/xscala/Help.scala
+
+** TurkishAPITest ~/src/kojo/git/kojo/src/test/scala/net/kogics/kojo/lite/i18n/TurkishAPITest.scala
+(shell-command "grep -r TurkishAPITest kojo/src/*" nil nil)
+kojo/src/test/scala/net/kogics/kojo/lite/i18n/TurkishAPITest.scala:class TurkishAPITest extends FunSuite with Matchers {
+TurkishAPITest:
+[info] - yinele(n){block} should repeat the block n times
+[info] - yineleDoğruysa(condition){block} should execute block while condition holds
+[info] - yineleOlanaKadar(condition){block} should execute block while condition does not hold
+[info] - yineleDizinli(n){i => fn(i)} should call fn n times with indices 1 to n
+[info] - yineleİlktenSona(start, end){i => fn(i)} should call fn with the Int values from start to end
+[info] - yineleKere[T](iterable){e => fn(e)} should process all elements of iterable
+[info] - İkil (Boolean in Turkish) should work
+[info] VectorBounceTest:
+
+* The End
