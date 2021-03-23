@@ -1,4 +1,41 @@
-* Find/Replace turkish translation/chars ~/src/kojo/git/kojo/lib/rstaui.jar:org/fife/rsta/ui/search/Search_tr.properties
+* modules on top of Java
+The Scala Programming Language (http://www.scala-lang.org)
+Docking Frames (http://dock.javaforge.com/) for providing multiple, dockable windows
+RSyntaxTextArea (http://fifesoft.com/rsyntaxtextarea/) for Syntax Highlighting and Code Completion within the Script Editor
+Scalariform (https://github.com/mdr/scalariform/) for Code Formatting within the Script Editor
+Piccolo2D (http://www.piccolo2d.org) for 2D Graphics
+JTS Topology Suite (http://tsusiatsoftware.net/jts/main.html) for Collision Detection
+JFugue (http://www.jfugue.org) for computer generated music
+The H2 Database Engine (http://www.h2database.com) for storing history
+GeoGebra (http://www.geogebra.org) for Interactive Geometry and Algebra
+HttpUnit (http://httpunit.sourceforge.net/) for HTTP communication
+JLaTeXMath (http://forge.scilab.org/index.php/p/jlatexmath/) to display LaTeX commands
+JLayer (http://www.javazoom.net/javalayer/javalayer.html) to play MP3 files
+Table Layout (https://java.net/projects/tablelayout) for Arithmetic Aerobics
+The Netbeans Platform (http://www.netbeans.org) for some Script Editor Icons
+The Scratch Project (http://scratch.mit.edu) for some Media files
+The OpenJDK Project (http://openjdk.java.net/) for Tracing support
+JHLabs image filters (http://www.jhlabs.com/ip/filters/) for Picture effects
+jSSC (http://code.google.com/p/java-simple-serial-connector/) for serial port communication
+The Gargi font (http://savannah.nongnu.org/projects/gargi) for Devanagari support
+The Doodle project (https://github.com/underscoreio/doodle) for rich color support
+ScalaSwingContrib (https://github.com/benhutchison/ScalaSwingContrib) for UI layout
+Scalatest (http://www.scalatest.org/) for testing
+Akka (https://akka.io/) for concurrency
+Darcula (https://github.com/bulenkov/Darcula) for the dark Kojo theme
+libTiled (https://www.mapeditor.org/) to load game level files created with the Tiled Map Editor
+Processing (https://processing.org/) for perlin noise and curved shapes
+Delaunay Triangulator (https://github.com/jdiemke/delaunay-triangulator) for triangulation of points
+Java implementation of HSLuv (https://github.com/hsluv/hsluv-java) for a perceptually uniform color space
+Rhino (https://developer.mozilla.org/en-US/docs/Mozilla/Projects/Rhino) for the Code Exchange interface
+* Find/Replace turkish translation/chars ~/src/kojo/git/kojo/lib/rstaui.jar
+
+
+   -rw-rw-rw-       408  22-Mar-2021  18:48:46  org/fife/rsta/ui/TextFilePropertiesDialog_tr.properties
+   -rw-rw-rw-       218  22-Mar-2021  18:49:22  org/fife/rsta/ui/GoToDialog_tr.properties
+   -rw-rw-rw-       605  22-Mar-2021  14:02:20  org/fife/rsta/ui/search/Search_tr.properties
+   -rw-rw-rw-       185  22-Mar-2021  18:51:26  org/fife/rsta/ui/search/SearchToolBar_tr.properties
+~/src/kojo/git/kojo/lib/rstaui.jar:org/fife/rsta/ui/search/Search_tr.properties
 * Picture
 
 .   transforms.scala      10924 Scala            ~/src/kojo/git/kojo/src/main/scala/net/kogics/kojo/picture/transforms.scala
