@@ -39,9 +39,9 @@ git config --global credential.helper osxkeychain
 git push --set-upstream origin master
 
 Asked for a username and for password, used my token:
+IF IT DOESNT WORK, GET A NEW ONE: Profile -> Settings -> Developer Settings -> Personal access tokens, repo access only
 Username for 'https://github.com': bulent2k2
-Password for 'https://bulent2k2@github.com': f697fdb9199685418559fc78c1ac0656b57afb66
-
+Password for 'https://bulent2k2@github.com': 6037e3065e4677a94d068f47bebec7ba119f68ef
 
 * Using Magit :-)
 (cd "kojo")
