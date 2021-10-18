@@ -4,7 +4,7 @@ http://www.randomhouse.com/kvpa/gilbert/blog/
 
 But, that's another story. I bring it up here because that's exactly what's happened to me: I stumbled on Kojo almost a year ago. Let me explain :-)   
 
-Almost a year ago this day, I was about 18 months into an early retirement -- highly recommended, too, if you're old enough, or if you've worked hard&long enough :-). I wanted to use some of my time to help my 9 year old son to learn programming. But, I didn't want him to learn javascript, python or java, let alone c or c++! I wanted him to start natively in a good functional language -- nothing beats one's mother tongue, does it? And Scala seemed very promısıng. But, I didn't want him to have to learn sbt, ammonite, or just stay with boring text. After all, he was used to good graphical environments like scratch from MIT. And, a year ago (2020.10.10 or so), I did a google search: "scala for kids" and got: 
+It was October of 2020 and I have been enjoying an early retirement -- highly recommended, too, if you feel like you've worked hard&long enough 😇. I wanted to use some of my time to help my then 9 year old son to learn programming. But, I didn't want him to learn Javascript, Python or Java, let alone C or C++! I wanted him to start natively in a good, healthy and practical functional language -- nothing beats one's mother tongue, does it? And Scala seemed very promısıng. But, I didn't want him to have to learn sbt, ammonite, or just stay with boring text. After all, he was used to good graphical environments like scratch from MIT. And, a year ago (2020.10.10 or so), I did a google search: "scala for kids" and got: 
 
 https://www.scala-lang.org/old/node/5624
 
