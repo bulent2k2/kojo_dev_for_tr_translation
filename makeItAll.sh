@@ -10,6 +10,7 @@ echo "Build script (~/src/kojo/git/makeItAll.sh) called from $cwd"
 kojo_root=/Users/ben/src/kojo
 cd $kojo_root/git/kojo
 echo "Starting the build in `pwd`"
+export PATH=.:/Users/ben/bin:/Library/Java/JavaVirtualMachines/jdk1.8.0_271.jdk/Contents/Home/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
 ./makezip.sh
 cd -
 
