@@ -29,8 +29,6 @@ Delaunay Triangulator (https://github.com/jdiemke/delaunay-triangulator) for tri
 Java implementation of HSLuv (https://github.com/hsluv/hsluv-java) for a perceptually uniform color space
 Rhino (https://developer.mozilla.org/en-US/docs/Mozilla/Projects/Rhino) for the Code Exchange interface
 * Find/Replace turkish translation/chars ~/src/kojo/git/kojo/lib/rstaui.jar
-
-
    -rw-rw-rw-       408  22-Mar-2021  18:48:46  org/fife/rsta/ui/TextFilePropertiesDialog_tr.properties
    -rw-rw-rw-       218  22-Mar-2021  18:49:22  org/fife/rsta/ui/GoToDialog_tr.properties
    -rw-rw-rw-       605  22-Mar-2021  14:02:20  org/fife/rsta/ui/search/Search_tr.properties
@@ -89,7 +87,8 @@ object Picture in: ~/src/kojo/git/kojo/grep_object
 
 
 ~/src/kojo/git/kojo/src/main/scala/net/kogics/kojo/lite/CoreBuiltins.scala
-~/src/kojo/git/kojo/src/main/scala/net/kogics/kojo/lite/Builtins.scala   e.g. canvasBounds
+~/src/kojo/git/kojo/src/main/scala/net/kogics/kojo/lite/Builtins.scala   e.g. canvasBounds animate animateWithRedraw
+~/src/kojo/git/kojo/src/main/scala/net/kogics/kojo/lite/DrawingCanvasAPI.scala animateWithState
 ~/src/kojo/git/kojo/src/main/scala/net/kogics/kojo/xscala/Help.scala
 
 ** TurkishAPITest ~/src/kojo/git/kojo/src/test/scala/net/kogics/kojo/lite/i18n/TurkishAPITest.scala
