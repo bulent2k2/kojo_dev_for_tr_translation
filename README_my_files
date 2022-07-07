@@ -1,3 +1,27 @@
+* kojo/src/main/resources/i18n/initk/tr.tw.kojo
+// make Turkish names visible
+val TurkishAPI = net.kogics.kojo.lite.i18n.TurkishAPI
+import TurkishAPI.{builtins => _, _ }
+// hide turtle.clear
+import kaplumbağa.{sil => _, _}
+* editor interpreter (turkish keywords!)
+.   ScriptEditor.scala    33041 Scala            ~/src/kojo/git/kojo/src/main/scala/net/kogics/kojo/lite/ScriptEditor.scala
+    trInit.scala          27660 Scala            ~/src/kojo/git/kojo/src/main/scala/net/kogics/kojo/lite/i18n/trInit.scala
+ %  lite                   1258 Dired by name    ~/src/kojo/git/kojo/src/main/resources/net/kogics/kojo/lite/
+    Bundle_tr.properties   11744 Conf[JavaProp]   ~/src/kojo/git/kojo/src/main/resources/net/kogics/kojo/lite/Bundle_tr.properties
+    README_my_files        6739 Fundamental      ~/src/kojo/git/README_my_files
+    sealedTrait.scala       585 Scala            ~/src/scala-class-effective/code-from-class/week_1/src/main/scala/org/epfl/myCode/sealedTrait.scala
+    scala-tutorial.kojo  136687 Scala            ~/src/kojo/git/kojo/src/main/resources/samples/tr/scala-tutorial.kojo
+ %  example                 313 Dired by name    ~/src/sample-project/src/main/scala/example/
+    ScalaCodeRunner2.scala   24267 Scala            ~/src/kojo/git/kojo/src/main/scala/net/kogics/kojo/xscala/ScalaCodeRunner2.scala
+    kojoInterpreter.scala    1679 Scala            ~/src/kojo/git/kojo/src/main/scala/net/kogics/kojo/xscala/kojoInterpreter.scala
+    CompilerAndRunner.scala   14368 Scala            ~/src/kojo/git/kojo/src/main/scala/net/kogics/kojo/xscala/CompilerAndRunner.scala
+ %  xscala                  847 Dired by name    ~/src/kojo/git/kojo/src/main/scala/net/kogics/kojo/xscala/
+    codeRunner.scala       2416 Scala            ~/src/kojo/git/kojo/src/main/scala/net/kogics/kojo/core/codeRunner.scala
+ %  core                   1514 Dired by name    ~/src/kojo/git/kojo/src/main/scala/net/kogics/kojo/core/
+    Builtins.scala        38449 Scala            ~/src/kojo/git/kojo/src/main/scala/net/kogics/kojo/lite/Builtins.scala
+    CodeExecutionSupport.scala   30223 Scala            ~/src/kojo/git/kojo/src/main/scala/net/kogics/kojo/lite/CodeExecutionSupport.scala
+ %  magit: kojo<git>       2901 Magit            ~/src/kojo/git/kojo/
 * modules on top of Java
 The Scala Programming Language (http://www.scala-lang.org)
 Docking Frames (http://dock.javaforge.com/) for providing multiple, dockable windows
