@@ -53,8 +53,11 @@ git push --set-upstream origin master
 
 Asked for a username and for password, used my token:
 IF IT DOESNT WORK, GET A NEW ONE: Profile -> Settings -> Developer Settings -> Personal access tokens, repo access only
+Then, just do a push (it may not work from Emacs shell, use terminal):
+% git push
+
 Username for 'https://github.com': bulent2k2
-Password for 'https://bulent2k2@github.com': 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
+Password for 'https://bulent2k2@github.com': <copy over the token from GitHub here>
 (Got the token on May 15 or so, 2021, in Turkey)
 Password for 'https://bulent2k2@github.com': <enter token here>
 
