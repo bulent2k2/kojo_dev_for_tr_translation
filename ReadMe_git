@@ -1,3 +1,6 @@
+The following is useful after `rm -rf project/ target/`:
+  git restore -- project/build.properties project/plugins.sbt
+
 https://github.com/litan/kojo/blob/master/localization.md
 
 Translation to Turkish:
@@ -28,8 +31,18 @@ OLD {
    git push --set-upstream origin master
 7- pull request from fork at GitHub
 
-
-Note: due to 2-step verification, had to do a little hacking:
+* In case there is a conflict between two repos, do the following (thanks to GitHub.com):
+ 1115  gs
+ 1116  git checkout -b litan-master master
+ 1117  git pull https://github.com/litan/kojo.git master
+ 1118  echo Did a commit in emacs magit here
+ 1119  git checkout master
+ 1120  git merge --no-ff litan-master
+ 1121  git push origin master
+ 1122  gs
+ 1123  build
+ 1124  ../kojo_exe
+* Note: due to 2-step verification, had to do a little hacking:
 git remote remove origin
 git remote add origin git@github.com:bulent2k2/kojo.git
 git remote -v
