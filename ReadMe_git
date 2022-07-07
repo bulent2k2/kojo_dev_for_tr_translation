@@ -56,6 +56,7 @@ IF IT DOESNT WORK, GET A NEW ONE: Profile -> Settings -> Developer Settings -> P
 Username for 'https://github.com': bulent2k2
 Password for 'https://bulent2k2@github.com': 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
 (Got the token on May 15 or so, 2021, in Turkey)
+Password for 'https://bulent2k2@github.com': <enter token here>
 
 * Using Magit :-)
 (cd "kojo")

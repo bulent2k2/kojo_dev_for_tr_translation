@@ -1,0 +1,19 @@
+The following is only historical and for personal use:
+
+This is my own documentation to help with building/testing/running/packaging kojo.
+Original goal was to localize it for Turkish speaking folks. So, there is also
+some doc on how the localization is to be done..
+
+To compile/package and run kojo, do:
+
+1- % build
+
+That's an alias that sources: /Users/ben/src/kojo/git/packageAndRun.sh
+See ./log/packageAndRun.log
+After kojo starts, switch to Turkish, quit and restart it doing:
+
+2- % kojo
+
+You'll see the flash screen with "Yükleniyor..."
+
+That's it.
