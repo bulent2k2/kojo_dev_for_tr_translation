@@ -1,0 +1,336 @@
+* Arduino: translate file names: #yukle ~/kojo-includes/ka-bridge.kojo -> #yukle ~/kojo-yuklemeler/ka-kopru.kojo
+~/src/kojo/git/kojo/src/main/resources/ka-bridge/tr/sample.kojo
+* DONE grep String *
+* tuşlar.VK_ESCAPE
+* Renk.fadeOut etc..
+* Media    /Users/ben/src/kojo/git/kojo/src/main/resources/media:
+Costume.womanWaving, car, pencil, bat1, bat2 ...
+/media/collidium/ball1.png
+/media/collidium/win.mp3
+* filter worksheet output:
+TurkishAPI.Sayı -> Sayı
+doğru //> val res36: Boolean = true
+* DONE #worksheet and #include
+** ben@Bulents-MacBook-Pro kojo % sgrep user\.language
+sgrep user\.language
+src/TAGS/TEMP_userLanguage.scala:main/scala/net/kogics/kojo/lite/KojoCtx.scala:    prefs.put("user.language", _userLanguage)
+src/TAGS/TEMP_userLanguage.scala:main/scala/net/kogics/kojo/lite/i18n/LangInit.scala:    val userLanguage = prefs.get("user.language", System.getProperty("user.language"))
+src/TAGS/TEMP_userLanguage.scala:main/scala/net/kogics/kojo/lite/i18n/LangInit.scala:      System.setProperty("user.language", userLanguage)
+src/TAGS/TEMP_userLanguage.scala:    prefs.put("user.language", _userLanguage)
+src/TAGS/TEMP_userLanguage.scala:    val userLanguage = prefs.get("user.language", System.getProperty("user.language"))
+src/TAGS/TEMP_userLanguage.scala:  System.setProperty("user.language", userLanguage)
+src/main/scala/net/kogics/kojo/util/Utils.scala:    loadResource2(s"/i18n/initk/${System.getProperty("user.language")}.${mode.code}.kojo")
+src/main/scala/net/kogics/kojo/xscala/Help.scala:        langHelp(topic, System.getProperty("user.language")).getOrElse(null)
+src/main/scala/net/kogics/kojo/xscala/CodeCompletionUtils.scala:        langMethodTemplate(completion, System.getProperty("user.language")).getOrElse(null)
+src/main/scala/net/kogics/kojo/lite/KojoCtx.scala:    prefs.put("user.language", _userLanguage)
+src/main/scala/net/kogics/kojo/lite/i18n/LangInit.scala:    val userLanguage = prefs.get("user.language", System.getProperty("user.language"))
+src/main/scala/net/kogics/kojo/lite/i18n/LangInit.scala:      System.setProperty("user.language", userLanguage)
+src/main/scala/net/kogics/kojo/lite/i18n/LangInit.scala:    System.getProperty("user.language") match {
+src/main/scala/net/kogics/kojo/lite/i18n/LangInit.scala:    System.getProperty("user.language") match {
+src/main/scala/net/kogics/kojo/lite/i18n/LangInit.scala:    System.getProperty("user.language") match {
+src/main/scala/net/kogics/kojo/lite/Main.scala:    kojoCtx = new KojoCtx(args.length == 1 && args(0) == "subKojo") // context needs to be created right up front to set user language
+src/test/scala/net/kogics/kojo/xscala/CodeCompletionUtilsTest.scala:    val oldLang = System.getProperty("user.language")
+src/test/scala/net/kogics/kojo/xscala/CodeCompletionUtilsTest.scala:    System.setProperty("user.language", "sv")
+src/test/scala/net/kogics/kojo/xscala/CodeCompletionUtilsTest.scala:    System.setProperty("user.language", oldLang)
+src/test/scala/net/kogics/kojo/xscala/HelpTest.scala:    val oldLang = System.getProperty("user.language")
+src/test/scala/net/kogics/kojo/xscala/HelpTest.scala:    System.setProperty("user.language", "sv")
+src/test/scala/net/kogics/kojo/xscala/HelpTest.scala:    System.setProperty("user.language", oldLang)
+ben@Bulents-MacBook-Pro kojo % 
+** ben@Bulents-MacBook-Pro kojo % cd /Users/ben/src/kojo/git/kojo
+ben@Bulents-MacBook-Pro kojo % grep -r \#worksheet src/*
+~/src/kojo/git/kojo/src/main/scala/net/kogics/kojo/lite/CodeExecutionSupport.scala    code.indexOf("#worksheet") != -1
+~/src/kojo/git/kojo/src/main/scala/net/kogics/kojo/util/Utils.scala       val includes = """//\s*#include.*""".r.findAllIn(code)
+~/src/kojo/git/kojo/src/main/scala/net/kogics/kojo/util/Utils.scala       def getFileName(s: String) = """//\s*#include""".r.replaceFirstIn(s, "").trim
+~/src/kojo/git/kojo/src/main/scala/net/kogics/kojo/util/Utils.scala       val baseCode = """//(\s)*#include(.*)""".r.replaceAllIn(code, "//$1#Include$2")
+** grep -r \#worksheet src/*
+*** prime-factors.kojo // #worksheet
+*** primes.kojo // #worksheet (satırın başındaki bir komut. Bu yazılımcığı çalışma sayfası olarak çalıştırıyor)
+ben@Bulents-MacBook-Pro kojo % grep -r \#include src/*
+** grep -r \#include src/*
+~/src/kojo/git/kojo/src/main/resources/ka-bridge/sample.kojo // #include ~/kojo-includes/ka-bridge.kojo
+~/src/kojo/git/kojo/src/main/resources/ka-bridge/ka_bridge_bt/ka_bridge_bt.ino #include <Servo.h>
+~/src/kojo/git/kojo/src/main/resources/ka-bridge/ka_bridge_bt/ka_bridge_bt.ino #include <SoftwareSerial.h>
+~/src/kojo/git/kojo/src/main/resources/ka-bridge/ka_bridge/ka_bridge.ino #include <Servo.h>
+~/src/kojo/git/kojo/src/main/resources/ka-bridge/ka_bridge/ka_bridge.ino #include <SoftwareSerial.h>
+*** ~/src/kojo/git/kojo/src/main/resources/ka-bridge/tr/sample.kojo // #include ~/kojo-includes/ka-bridge.kojo
+~/src/kojo/git/kojo/src/main/resources/robosim/obstacle-greedy.kojo // #include /robosim/robot.kojo
+~/src/kojo/git/kojo/src/main/resources/robosim/obstacle-greedy.kojo // #include /robosim/environment1.kojo
+~/src/kojo/git/kojo/src/main/resources/robosim/obstacle-furthest.kojo // #include /robosim/robot.kojo
+~/src/kojo/git/kojo/src/main/resources/robosim/obstacle-furthest.kojo // #include /robosim/environment1.kojo
+*** ~/src/kojo/git/kojo/src/main/resources/robosim/tr/obstacle-greedy.kojo // #include /robosim/tr/robot.kojo
+~/src/kojo/git/kojo/src/main/resources/robosim/tr/obstacle-greedy.kojo // #include /robosim/tr/cevre.kojo
+*** ~/src/kojo/git/kojo/src/main/resources/robosim/tr/obstacle-furthest.kojo // #include /robosim/tr/robot.kojo
+~/src/kojo/git/kojo/src/main/resources/robosim/tr/obstacle-furthest.kojo // #include /robosim/tr/cevre.kojo
+~/src/kojo/git/kojo/src/main/resources/samples/tr/TRANSLATE_NOW * #worksheet and #include 
+*** ?? ~/src/kojo/git/kojo/src/main/resources/challenge/angles-and-curves.kojo // #include /challenge/runner.kojo
+~/src/kojo/git/kojo/src/main/resources/challenge/get-started.kojo // #include /challenge/runner.kojo
+*** ~/src/kojo/git/kojo/src/main/resources/challenge/tr/get-started.kojo // #include /challenge/tr/runner.kojo
+ben@Bulents-MacBook-Pro kojo % 
+* keywords!
+val -> dez // değişmez değer
+var -> den // değişken değer
+* ~/src/kojo/git/kojo/src/main/scala/net/kogics/kojo/lite/AppMenu.scala:    val genProgMenu = newJMenu(Utils.loadString("S_GeneralProgramming"))
+* DONE oyunSüresiniGöster -> oyunSüresiniGeriyeSayarakGöster
+DONE addition-game.kojo:val oyunSüresi = 30 // Bir dakika sürsün istersen 60 girebilirsin
+DONE car-ride.kojo:val oyunSüresi = 60
+DONE collidium.kojo:    oyunSüresiniGöster(60, "Süre doldu. Tekrar dene", renkler.lightBlue, 20) // açık mavi
+DONT DO THIS ONE crazy-square.kojo:val oyunSüresi = 60
+DONE flappy-ball.kojo:oyunSüresiniGöster(oyunSüresi, "Tebrikler!", yeşil, 20)
+DONE hunted.kojo:val oyunSüresi = 20
+DONE multiplication-game.kojo:        if (geçenSüre == oyunSüresi) {
+DONE scala-tutorial.kojo:oyunSüresiniGeriyeSayarakGöster(60, "Süre bitti", yeşil) // oyun 60 saniye sürsün 
+DONE subtraction-game.kojo:        if (geçenSüre == oyunSüresi) {
+* DONE Checkin: 
+More translation to handle a few more edge-cases in math games
+Translated a few more methods and types from swing GUI library. 
+Refactored math translation code. Translated some methods from kmath. 
+Translated a few more core types.
+* Game of Life in Turkish gives an error upon click from Story window
+* Sayma Alıştırması (next to Çizim Tuvali) where is the code?
+* Öykücü
+* case class .copy method e.g. memory-cards.kojo
+  https://stackoverflow.com/questions/35626038/scala-case-class-copy-implementation
+* othello ve mağara
+~/src/kojo/git/kojo/installer/examples/othello/menu_tr.kojo.installed
+~/src/kojo/git/kojo/installer/examples/tiledgame/game_tr.kojo.installed
+* arayüz ay =>
+./widgets-canvas.kojo
+~/src/kojo/git/kojo/installer/examples/othello/menu_tr.kojo.installed
+~/src/kojo/git/kojo/src/main/resources/mathgames/tr/identify-fractions.kojo
+~/src/kojo/git/kojo/src/main/resources/mathgames/tr/counting.kojo
+~/src/kojo/git/kojo/src/main/resources/mathgames/tr/make-fractions.kojo
+~/src/kojo/git/kojo/src/main/scala/net/kogics/kojo/lite/i18n/tr/arayuz.scala
+* mathgames:
+../../mathgames/tr/counting.kojo
+* öykücü
+sgrep "running story"
+~/src/kojo/git/kojo/src/main/scala/net/kogics/kojo/story/StoryTeller.scala
+You can control a running story via buttons that appear at the bottom of this pane.
+    prevBut.setToolTipText(Utils.loadString("S_StoryTellerPreviousView"))
+
+[type] Story : (pages: net.kogics.kojo.story.Viewable*): net.kogics.kojo.story.Story
+[type] Page : (name: String, body: => scala.xml.Node, code: => Unit): net.kogics.kojo.story.Page
+* Sayma Alıştırması
+1- CTL_ArithAerobicsTopComponent=Sayma Alıştırması
+2- sgrep CTL_ArithAerobicsTopComponent
+~/src/kojo/git/kojo/src/main/scala/net/kogics/kojo/lite/topc/ArithAerobicsHolder.scala:  extends BaseHolder("AE", Utils.loadString("CTL_ArithAerobicsTopComponent"), ae) {
+3- ArithAerobicsHolder.scala:
+import net.kogics.kojo.lite.ArithAerobicsPane
+4- ~/src/kojo/git/kojo/src/main/scala/net/kogics/kojo/lite/ArithAerobicsPane.scala
+import net.kogics.rithica.addition.{TopContainer => Adder}
+import net.kogics.rithica.division.{TopContainer => Divider}
+import net.kogics.rithica.multiplication.{TopContainer => Multiplier}
+import net.kogics.rithica.subtraction.{TopContainer => Subtractor}
+import net.kogics.rithica.ui.{TopContainer => ArithContainer}
+5- ~/src/kojo/git/kojo/lib/rithica.jar
+* DONE grep size *
+DONE genart-mondrian.kojo    case (renk, sıra) => if (sıra < dörtgenler.size)
+DONE mandelbrot.kojo        renkler(sayıya(karekökü(i + 10 - yumuşak) * 256) % renkler.size)
+DONE scala-tutorial.kojo satıryaz(s"Dünyamızda $KU'in karesi yani ${dünya.size} tane hane var.")
+DONE scala-tutorial.kojo yaz(s"$seç. desende ${desen.size} tane canlı kare var. Adı $adı.\nNesilleri sayalım: ")
+* DONE Check-in: translations for StringBuilder and PartialFunction
+These are used in l-systems sample. Updated the sample to use the new translations.
+* DONE EsnekYazı
+package.scala:  type EsnekYazı=collection.mutable.StringBuilder
+l-systems.kojo:        val üretilmişSayı = new EsnekYazı
+* DONE type Bölümselİşlev[D,R] = PartialFunction[D,R]
+* DONE grep mkString *
+* DONE grep toString *
+* DONE grep toInt *
+* DONE rep toDouble *
+* DONE grep foreach *
+DONE collidium.kojo engeller.foreach { o => çiz(o) }
+DONE flappy-ball.kojo    engeller foreach { engel =>  // engellerin herbiri içın yapmamız gereken şeyler 
+DONE genart-delaunay.kojo    üçgenler.foreach { üçgen =>
+DONE l-systems.kojo        kuram.foreach { c =>
+* DONE grep head *
+primes.kojo:    sayılar.head #:: elek3(sayılar.tail.filter { e => e % sayılar.head != 0 })
+* DONE grep filter *
+primes.kojo:    case sayı :: gerisi => sayı :: elek(gerisi.filter { e => e % sayı != 0 })
+primes.kojo:    case sayı #:: gerisi => sayı #:: elek2(gerisi.filter { e => e % sayı != 0 })
+primes.kojo:    sayılar.head #:: elek3(sayılar.tail.filter { e => e % sayılar.head != 0 })
+primes.kojo:val asallar: MiskinDizin[Sayı] = 2 #:: MiskinDizin.sayalım(3, 2).filter { asalMı }
+* DONE grep map *
+DONE collidium.kojo val engeller = (1 to engelSayısı).map { n =>
+DONE genart-cubic-disarray.kojo çiz(dörtgenler.map { d =>
+DONE genart-tiled-lines.kojo çiz(çizgiler.map(çizgidenResim))
+DONE read-vector-bargraph.kojo val çubuklar = yöney.map { n => çubuk(n) }
+DONE read-vector-mean.kojo satıryaz(f"      Uzunluğu: ${karekökü(yöney.map(x => x*x).sum)}%.2f")  // pisagor bu kadar basit! (8-)
+* DONE grep value *
+DONE addition-game.kojo             val x = yanıtKutusu.value
+DONE multiplication-game.kojo             val x = yanıtKutusu.value
+DONE subtraction-game.kojo             val x = yanıtKutusu.value
+DONE widgets-canvas.kojo         val hız = ay_hız.value // saniyede bu kadar nokta ilerlesin
+DONE ~/src/kojo/git/kojo/installer/examples/othello/menu_tr.kojo.installed
+* DONE grep abs *
+DONE dragon-curve.kojo    ejder(derinlik - 1, açı.abs)  // .abs mutlak değeri verir. -1.5.abs = 1.5
+DONE hunted.kojo val enİriY = ta.y.abs
+DONE lunar-lander.kojo            if (im.hız.y.abs > 3) {
+* DONE grep rgba and grep hsl etc.. see renk.scala (tik tac toe)
+* DONE grep radial *
+eye-effects.kojo val boya = renkler.radialMultipleGradient(
+eye.kojo val boya = renkler.radialMultipleGradient(0, 0, 150,
+* DONE grep linear *
+genart-delaunay.kojo:            val doğrusalEğim = renkler.linearGradient(a.x, a.y, siyah, b.x, b.y, mavi)
+lamp-animation2.kojo    setFillColor(cm.linearGradient(0, 0, cm.red, 0, 130, cm.yellow))
+tan-theta.kojo boyamaRenginiKur(renkler.linearGradient(
+tree2.kojo artalanıKur(renkler.linearGradient(0, -100, kahverengi, 0, 100, açıkMavi))
+* DONE grep çevir *
+penta-pattern.kojo:    renk = renk.çevir(birSonraki)
+square-pattern.kojo:    renk = renk.çevir(360 / 15)
+tic-tac-toe.kojo:    def sütun(x: Sayı) = tahta(x).toSeq // tahta(x) bir Array. Dizi'ye çevirelim onu
+tree0.kojo:    // 'sayıya' adlı metod, kesirli sayıyı tam sayıya çeviriyor.
+two-turtle-interaction.kojo:      o.çevir(k1)
+two-turtle-interaction2.kojo:  bu.çevir(k1)
+widgets-canvas.kojo:    </html>.toString // toString Yazıya çevirir
+* DONE Test: radiance.kojo
+* DONE traits givens/implicits
+** sorted by trait name 
+AnyMethodsInTurkish
+CalendarInTurkish
+CharMethodsInTurkish
+ColorMethodsInTurkish
+GeoMethodsInTurkish
+LazyListMethodsInTurkish
+ListMethodsInTurkish
+NumMethodsInTurkish
+OptionMethodsInTurkish
+RangeMethodsInTurkish
+SeqMethodsInTurkish
+SetMethodsInTurkish
+StringMethodsInTurkish
+VectorMethodsInTurkish
+** sorted by file name
+aralik.scala trait RangeMethodsInTurkish
+belki.scala trait OptionMethodsInTurkish
+buan.scala trait CalendarInTurkish
+dizi.scala trait SeqMethodsInTurkish
+dizin.scala trait ListMethodsInTurkish
+geo.scala trait GeoMethodsInTurkish
+harf.scala trait CharMethodsInTurkish
+kume.scala trait SetMethodsInTurkish
+miskindizi.scala trait LazyListMethodsInTurkish
+nesne.scala trait AnyMethodsInTurkish
+renk.scala trait ColorMethodsInTurkish
+sayi.scala trait NumMethodsInTurkish
+yazi.scala trait StringMethodsInTurkish
+yoney.scala trait VectorMethodsInTurkish
+* DONE toString -> yazıya
+* DONE TO TEST (all staged samples!): 
+~/src/kojo/git/kojo/src/main/resources/samples/tr/genart-tri-mesh.kojo
+~/src/kojo/git/kojo/src/main/resources/samples/tr/genart-joy-division.kojo
+* DONE Yöney GeoYol geo.scala
+* DONE Dikdörtgen Üçgen
+* DONE toDouble toDegrees
+* DONE TO TEST! toInt -> sayıya İşlevler sayfasının son yazılımı
+DONE angle-experiment.kojo:    val açı = yuvarla(360 - doğrultu + 90).toInt % 360 // toInt: kesirden sayıya
+DONE collidium.kojo val topunGöreceKonumuBaşta = (engellerArasıUzaklık / 4).toInt
+DONE fern.kojo:        kalemRenginiKur(Renk(0, mutlakDeğer(200 - x * 3).toInt, 40))
+DONEflappy-ball.kojo    val boy = rastgele((0.5 * ta.boyu).toInt) + 50
+genart-joy-division.kojo        noktalar = noktalar :+ Nokta(x, y + rastgeleKesir(f1.toInt)) // toInt Kesir'i Sayı'ya çevir
+instruction-palette.kojo    math.max(50, te.width.toInt)
+l-systems.kojo                val n = üretilmişSayı.toString.toInt // esnek yazıdan sayıya çevir
+tangram-skier.kojo        kalemRenginiKur(Renk(uzaklık.toInt, mutlakDeğer(255 - uzaklık * 3).toInt, 125))
+* DONE renk.spin
+* DONE prime-factors!
+** (shell-command "grep foreach *.*" nil nil)
+car-ride.kojo:    // foreach yöntemi, yukarıda kullandığımız Eşlem türünün herÖgeİçin adlı yöntemine benzer.
+car-ride.kojo:    yolÇizgileri.foreach { yç => 
+collidium.kojo:engeller.foreach { o => çiz(o) }
+collidium.kojo:engeller.foreach { o => o.girdiyiAktar(Resim.tuvalBölgesi) }
+flappy-ball.kojo:    engeller foreach { engel =>  // engellerin herbiri içın yapmamız gereken şeyler 
+genart-delaunay.kojo:    üçgenler.foreach { üçgen =>
+genart-tri-mesh.kojo:üçgenSıraları.foreach { sıra =>
+l-systems.kojo:        kuram.foreach { c =>
+prime-factors.kojo:deneyler.foreach { d =>
+* resim.scala implement karalamadan
+* DONE todo: translate until and to used in tutorial
+** rest:
+genart-hypnotic-squares.kojo
+DONE genart-tiled-lines.kojo
+DONE instruction-palette.kojo
+DONE mandelbrot.kojo
+* next commit
+Translating a few of the common methods of Char, List and String
+for use in scala tutorial and other samples.
+* scala tutorial
+Bookmark: Yazıların (String) Kullanılışı
+Daha once:
+  Program Akışı: to,until yerine Aralik
+  Sıralamalar: (Char, Sayı) -> (Harf, Sayı)
+* koco'ya kısaca bir gözatalım mı? (TikTok! see Keep/Kojo)
+kojo diye yazılır ama koco diye okunur.
+java/scala tabanlı çağdaş bir öğrenim/öğretim ortamı
+- oyun oynama
+- öğrenme
+- deney yapma
+- yazılımcık yazma
+- mantıklı düşünme
+- multi-media yazma yaratma
+- robot programlama
+* TODO: Translate:
+Unable to stop script.
+Doing a forced-stop. It's best to just restart Kojo!
+Problem - java.lang.ThreadDeath (see log for details)
+Script Stopped.
+* New in December 2021
+.   lamp-animation.kojo    1149 Scala            ~/src/kojo/git/kojo/src/main/resources/samples/lamp-animation.kojo
+    tree2.kojo              818 Scala            ~/src/kojo/git/kojo/src/main/resources/samples/tree2.kojo
+** animateWithState animateWithRedraw
+canlandırDurumla
+canlandırYenidenÇizerek
+.   Help.scala            65690 Scala            ~/src/kojo/git/kojo/src/main/scala/net/kogics/kojo/xscala/Help.scala
+* New in October 2021
+.   tic-tac-toe.kojo<tr>    7966 Scala            ~/src/kojo/git/kojo/src/main/resources/samples/tr/tic-tac-toe.kojo
+    tic-tac-toe.kojo<samples>    6855 Scala            ~/src/kojo/git/kojo/src/main/resources/samples/tic-tac-toe.kojo
+  -rw-r--r--   1 ben  staff   6855 Oct  9 12:04 tic-tac-toe.kojo
+  -rw-r--r--   1 ben  staff    424 Oct  9 12:04 radiance.kojo
+  -rw-r--r--   1 ben  staff   1246 Oct  9 12:04 genart-hypnotic-squares.kojo
+  -rw-r--r--   1 ben  staff   1846 Oct  9 12:04 angle-experiment.kojo
+* MOSTLY DONE:
+         ../../mathgames
+DONE	 ../../robosim
+DONE     ../../challenge
+DONE 270 ~/src/kojo/git/kojo/installer/examples/tiledgame/game_tr.kojo.installed
+DONE 182 car-ride.kojo
+DONE 278 mandelbrot.kojo
+DONE  48 widgets-canvas.kojo
+DONE  75 genart-tri-mesh.kojo
+DONE  82 flappy-ball.kojo
+DONE 109 l-systems.kojo
+DONE 120 arduino-prog.kojo
+DONE 142 tangram-skier.kojo
+DONE 156 collidium.kojo
+NOT IN MENUS 193 composing-music.kojo
+* Set
+car-ride.kojo:val markers = collection.mutable.Set.empty[Picture]
+flappy-ball.kojo:var obstacles = Set.empty[Picture]
+scala-tutorial.kojo:      row("""Set(1, 3, 5, 3, 1).mkString("{", " ", "}")""".c, "Bir öncekinde olduğu gibi G1'in elemanlarınının aralarına G3'ü ekleyerek yazıya çevirir ama en başa G2, en sona da G4 yazılarını ekler.")
+scala-tutorial.kojo:Set(1, 3, 3, 1).mkString("{", " ", "}")
+* Map
+DONE hunted.kojo
+DONE turtle-controller.kojo
+car-ride.kojo
+* Vector Array ArrayBuffer
+** grep
+*** LATER
+car-ride.kojo:    cars += c -> Vector2D(0, -carSpeed)
+collidium.kojo:        Vector2D(1, 1)
+collidium.kojo:import collection.mutable.ArrayBuffer
+*** DONE:
+scala-tutorial.kojo:    "Ekrana yazı yazmak bilgisayar programlamada epey sık karşılaşılan bir sorun! Bu bölümde bazı tanımlar ve yazı türünün faydalı metodlarından bazılarını göreceğiz. Bu metodların benzerleri Dizin türünde ve ona benzeyen sıra sıra elemanlar içeren başka türlerde de var, Dizim (Array), Yöney (Vector), Dizi (Seq) gibi hafifçe başkalaşmış ama benzer türler). Bir sonraki bölümde Dizin metodlarını görünce benzerliği farkedeceksin.".p,
+*** Tested:
+genart-cubic-disarray.kojo:var dörtgenler = Vector.empty[Dikdörtgen]
+genart-joy-division.kojo:    var noktalar = Vector.empty[Nokta] // boş Nokta kümesiyle başlayalım
+genart-tiled-lines.kojo:var çizgiler = Vector.empty[Köşegen] // aslında çizgileri hesaplayıp bu Vector'e kaydedeceğiz
+genart-tri-mesh.kojo:    var üçgenSırası = Vector.empty[Nokta]  // todo
+genart-mondrian.kojo:    Vector(dörtgenA, dörtgenB)
+read-vector-bargraph.kojo:var yöney = Vector[Sayı]()
+read-vector-mean.kojo:var yöney = Vector[Sayı]()
+* Array/ArrayBuffer
+collidium.kojo:import collection.mutable.ArrayBuffer
+collidium.kojo:def line(ps: ArrayBuffer[Point], c: Color) = Picture {
+collidium.kojo:val slingPts = ArrayBuffer.empty[Point]
+collidium.kojo:val paddlePts = ArrayBuffer.empty[Point]
+genart-delaunay.kojo:val noktalar = ArrayBuffer(Nokta(-100, -50), Nokta(100, -50), Nokta(-100, 50))
+* The End

@@ -1,0 +1,305 @@
+src/itest/scala/net/kogics/kojo/xscala/InterpTest.scala:object builtins {
+src/itest/scala/net/kogics/kojo/xscala/InterpTest.scala:  object Tw {
+src/itest/scala/net/kogics/kojo/xscala/InterpTest.scala:  object TSCanvas {
+src/main/resources/ka-bridge/ka-bridge-bt.kojo:object Servo {
+src/main/resources/ka-bridge/ka-bridge.kojo:object Servo {
+src/main/resources/ka-bridge/ka-bridge.kojo:object SoftSerial {
+src/main/resources/ka-bridge/ka-bridge.kojo:object UltraSonic {
+src/main/resources/samples/scala-tutorial.kojo:                 "Scala is an Object Oriented language. The underlying premis, like other Object Oriented languages, is that there are objects that contain state and this state is manipulated or accessed by means of Methods. Kojo is in fact a collection of objects that interpret the commands or procedures that you use in the Script Editor to move the Turtle, draw lines on the Turtle Canvas or print in the Output Pane.".p, 
+src/main/resources/samples/scala-tutorial.kojo:                 "New types of object can be defined by describing their class. The class specification details what fields an object will contain, and the Methods that it will implement. Methods are functions that run within the context of an object, and have access to all the fields of the object. You create methods by defining them within a class with 'def', just as you have done for regular functions. Methods can be commands or pure functions.".p,  
+src/main/resources/samples/scala-tutorial.kojo:                 "When you define a class you are also defining a new type of object. This new type and those already defined such as Int or Double are treated in a uniform way. The benefits of this uniformity, everything is an object, will soon become apparent.".p, 
+src/main/resources/samples/scala-tutorial.kojo:                 "You can start by defining an object that represents a point with two fields. It is conventional to start class names with an capital letter while variable names and method names start with a small one".p,
+src/main/resources/samples/scala-tutorial.kojo:                 """This is the definition for the object. An instance of of the object can be created by using the "new" keyword.""".p,
+src/main/resources/samples/scala-tutorial.kojo:                 "In Scala all classes are created with a default 'toString' method which produces a string representation of the object, by default its reference. You can override that method to give a more user friendly representation as has been done with Point above.".p,  
+src/main/resources/samples/scala-tutorial.kojo:                "Everything is an object. As such, you may have wondered why the example above was not written more in Java style.".p,
+src/main/resources/samples/scala-tutorial.kojo:                "This is one of the nice syntactic features of Scala that helps to give clarity and uniformity to your code. You may leave out the parentheses and dots as Scala can infer where they belong. It is this carefully thought out syntax that allows you to implement Domain Specific Languages (DSLs). So all objects, including numbers are just objects with methods. For example you can perform the + method on the number 1 with the extended syntax too. In Scala the mathematical operators like '+' , '-' , '*' and '/' are just methods too.".p,
+src/main/resources/samples/scala-tutorial.kojo:                "All the base types are in fact objects too that can be used and extended just like any other object.".p, 
+src/main/resources/samples/scala-tutorial.kojo:                "Pattern matching provide a safe way to take actions based on the type of an object. This ability is extremely useful for working with case classes and will be illustrated in the next section.".p,
+src/main/resources/samples/scala-tutorial.kojo:"The first task is to create classes that describe the node objects. Immediately we see a problem with the internal node at the top of the tree. The pointer to the sub-tree may be either an internal node type or a leaf node type. We want to say that the pointer is one of these two types but not any other. It could not be an Int for example. In Scala you can do this by creating a class hierarchy. First a general tree node class is specified and then each of the possible nodes types is derived from it using the 'extends' keyword. The sub-class is said to inherit the properties of the parent class.".p,
+src/main/resources/samples/scala-tutorial.kojo:"The 'extend' means that the newly defined class inherits all the fields and methods from the parent class, also called super class, as well as defining it's own. It also becomes a sub-type of that class, meaning that a sub-type object can be saved in a super-type variable as the following example illustrates.".p,
+src/main/resources/samples/scala-tutorial.kojo:"Inheritance and class heirarchy is one of the fundemental concepts that underpins Object Oriented programming. Pattern matching gives you a type safe way of dealing with objects created in that way.".p) 
+src/main/resources/samples/scala-tutorial.kojo:                 "In Scala everything is an object and so are functions. They may be passed as arguments, returned from other functions or stored in variables. This feature of Scala enables some very concise and elegant solutions to common programming problems as well as allowing extremely flexible program flow control structures.  The Scala Actors make heavy use of this capability for supporting concurrent programming. However, list manipulation provides a good starting point for an introduction. ".p,
+src/main/resources/samples/scala-tutorial.kojo:                 "Lists are a very natural and common way people think about working with things. Scala provides a type of object called a List that allows you to represent lists of objects very easily. Lists keep things in a sequential order and provide a large number of methods or commands to enable you to create and manipulate lists. One way to create a list is to use the class constructor as we did for Point earlier. The constructor accepts any number of arguments and creates a List object containing those items. Here is an example that creates an integer list. The type will be designated by List[Int] - the [] encloses the element type information. Because each of the elements is an Int, Scala infers that the type of 'lst' is List[Int] - and you do not have to specify this explicitly.".p,  
+src/main/resources/samples/scala-tutorial.kojo:                 "And then the modified filter function itself is defined, with an extra parameter to pass the filter condition function, just like any other object. Notice the form of the type declaration. The type is a function that takes one Int parameter and returns a Boolean. Only functions of this type can be passed as arguments. In the function body 'cond' is used just like any other function.".p,
+src/main/resources/samples/scala-tutorial.kojo:                 "Generics will be explored more later but now, more about functions as objects.".p,
+src/main/resources/samples/scala-tutorial.kojo:                 "More on 'Functions are objects'".h3,
+src/main/resources/samples/scala-tutorial.kojo:"You will find that this ability to treat functions as objects is very useful in all sorts of programming tasks - for example - passing callback functions in event driven IO, passing tasks to Actors in concurrent processing environments, or in scheduling work loads. This often results in far more concise code, as you just saw.".p, 
+src/main/resources/samples/scala-tutorial.kojo:                 "It is often useful to return more than one value from a function or make up collections of things with more than one value for each item. You can of course always create a class to do this but the typing overhead of making the definition becomes onerous. Scala allows you to create what are in effect objects with anonymous fields - inline, using Tuples. A tuple is simply a set of values enclosed in paretheses. A tuple can contain a mixture of types.".p,
+src/main/resources/samples/scala-tutorial.kojo:                 "The Tuple is an object, and so can be accessed using the dot notation; but since tuple fields have no names they are accessed using a name created with an underscore followed by the position index.".p, 
+src/main/resources/samples/scala-tutorial.kojo:                 "The objective is to produce a list of tuples with two entries - a letter, and a count. This is our frequency table.".p, 
+src/main/resources/samples/scala-tutorial.kojo:"Nearly all objects have a toString method to create a character representation.".p,
+src/main/resources/samples/scala-tutorial.kojo:            row("String.valueOf(List(1,2,3))".c,"Converts P1 to String, where P1 is any value (primitive or object).")
+src/main/resources/samples/scala-tutorial.kojo:            row("""write("hello world")""".c, "Makes the turtle write the specified object as a string at its current location."),
+src/main/resources/samples/solving-linear-equations.kojo:object EqnQuestion {
+src/main/resources/samples/d3-intro.kojo:// so that you can see objects very far away as
+src/main/resources/samples/d3-intro.kojo:            	since object's length on the screen depends on how far it is from the camera. A single
+src/main/resources/samples/d3-intro.kojo:            	pixel could represent a very short distance when working with nearby objects, or a very
+src/main/resources/samples/d3-intro.kojo:            	long distance when referring to distant objects. Instead, we use the axes to measure distance.
+src/main/resources/samples/lunar-lander.kojo:// Usage of simple math to center game objects
+src/main/resources/samples/tr/todo/scala-tutorial.kojo~:                 "Scala is an Object Oriented language. The underlying premis, like other Object Oriented languages, is that there are objects that contain state and this state is manipulated or accessed by means of Methods. Kojo is in fact a collection of objects that interpret the commands or procedures that you use in the Script Editor to move the Turtle, draw lines on the Turtle Canvas or print in the Output Pane.".p, 
+src/main/resources/samples/tr/todo/scala-tutorial.kojo~:                 "New types of object can be defined by describing their class. The class specification details what fields an object will contain, and the Methods that it will implement. Methods are functions that run within the context of an object, and have access to all the fields of the object. You create methods by defining them within a class with 'def', just as you have done for regular functions. Methods can be commands or pure functions.".p,  
+src/main/resources/samples/tr/todo/scala-tutorial.kojo~:                 "When you define a class you are also defining a new type of object. This new type and those already defined such as Int or Double are treated in a uniform way. The benefits of this uniformity, everything is an object, will soon become apparent.".p, 
+src/main/resources/samples/tr/todo/scala-tutorial.kojo~:                 "You can start by defining an object that represents a point with two fields. It is conventional to start class names with an capital letter while variable names and method names start with a small one".p,
+src/main/resources/samples/tr/todo/scala-tutorial.kojo~:                 """This is the definition for the object. An instance of of the object can be created by using the "new" keyword.""".p,
+src/main/resources/samples/tr/todo/scala-tutorial.kojo~:                 "In Scala all classes are created with a default 'toString' method which produces a string representation of the object, by default its reference. You can override that method to give a more user friendly representation as has been done with Point above.".p,  
+src/main/resources/samples/tr/todo/scala-tutorial.kojo~:                "Everything is an object. As such, you may have wondered why the example above was not written more in Java style.".p,
+src/main/resources/samples/tr/todo/scala-tutorial.kojo~:                "This is one of the nice syntactic features of Scala that helps to give clarity and uniformity to your code. You may leave out the parentheses and dots as Scala can infer where they belong. It is this carefully thought out syntax that allows you to implement Domain Specific Languages (DSLs). So all objects, including numbers are just objects with methods. For example you can perform the + method on the number 1 with the extended syntax too. In Scala the mathematical operators like '+' , '-' , '*' and '/' are just methods too.".p,
+src/main/resources/samples/tr/todo/scala-tutorial.kojo~:                "All the base types are in fact objects too that can be used and extended just like any other object.".p, 
+src/main/resources/samples/tr/todo/scala-tutorial.kojo~:                "Pattern matching provide a safe way to take actions based on the type of an object. This ability is extremely useful for working with case classes and will be illustrated in the next section.".p,
+src/main/resources/samples/tr/todo/scala-tutorial.kojo~:"The first task is to create classes that describe the node objects. Immediately we see a problem with the internal node at the top of the tree. The pointer to the sub-tree may be either an internal node type or a leaf node type. We want to say that the pointer is one of these two types but not any other. It could not be an Int for example. In Scala you can do this by creating a class hierarchy. First a general tree node class is specified and then each of the possible nodes types is derived from it using the 'extends' keyword. The sub-class is said to inherit the properties of the parent class.".p,
+src/main/resources/samples/tr/todo/scala-tutorial.kojo~:"The 'extend' means that the newly defined class inherits all the fields and methods from the parent class, also called super class, as well as defining it's own. It also becomes a sub-type of that class, meaning that a sub-type object can be saved in a super-type variable as the following example illustrates.".p,
+src/main/resources/samples/tr/todo/scala-tutorial.kojo~:"Inheritance and class heirarchy is one of the fundemental concepts that underpins Object Oriented programming. Pattern matching gives you a type safe way of dealing with objects created in that way.".p) 
+src/main/resources/samples/tr/todo/scala-tutorial.kojo~:                 "In Scala everything is an object and so are functions. They may be passed as arguments, returned from other functions or stored in variables. This feature of Scala enables some very concise and elegant solutions to common programming problems as well as allowing extremely flexible program flow control structures.  The Scala Actors make heavy use of this capability for supporting concurrent programming. However, list manipulation provides a good starting point for an introduction. ".p,
+src/main/resources/samples/tr/todo/scala-tutorial.kojo~:                 "Lists are a very natural and common way people think about working with things. Scala provides a type of object called a List that allows you to represent lists of objects very easily. Lists keep things in a sequential order and provide a large number of methods or commands to enable you to create and manipulate lists. One way to create a list is to use the class constructor as we did for Point earlier. The constructor accepts any number of arguments and creates a List object containing those items. Here is an example that creates an integer list. The type will be designated by List[Int] - the [] encloses the element type information. Because each of the elements is an Int, Scala infers that the type of 'lst' is List[Int] - and you do not have to specify this explicitly.".p,  
+src/main/resources/samples/tr/todo/scala-tutorial.kojo~:                 "And then the modified filter function itself is defined, with an extra parameter to pass the filter condition function, just like any other object. Notice the form of the type declaration. The type is a function that takes one Int parameter and returns a Boolean. Only functions of this type can be passed as arguments. In the function body 'cond' is used just like any other function.".p,
+src/main/resources/samples/tr/todo/scala-tutorial.kojo~:                 "Generics will be explored more later but now, more about functions as objects.".p,
+src/main/resources/samples/tr/todo/scala-tutorial.kojo~:                 "More on 'Functions are objects'".h3,
+src/main/resources/samples/tr/todo/scala-tutorial.kojo~:"You will find that this ability to treat functions as objects is very useful in all sorts of programming tasks - for example - passing callback functions in event driven IO, passing tasks to Actors in concurrent processing environments, or in scheduling work loads. This often results in far more concise code, as you just saw.".p, 
+src/main/resources/samples/tr/todo/scala-tutorial.kojo~:                 "It is often useful to return more than one value from a function or make up collections of things with more than one value for each item. You can of course always create a class to do this but the typing overhead of making the definition becomes onerous. Scala allows you to create what are in effect objects with anonymous fields - inline, using Tuples. A tuple is simply a set of values enclosed in paretheses. A tuple can contain a mixture of types.".p,
+src/main/resources/samples/tr/todo/scala-tutorial.kojo~:                 "The Tuple is an object, and so can be accessed using the dot notation; but since tuple fields have no names they are accessed using a name created with an underscore followed by the position index.".p, 
+src/main/resources/samples/tr/todo/scala-tutorial.kojo~:                 "The objective is to produce a list of tuples with two entries - a letter, and a count. This is our frequency table.".p, 
+src/main/resources/samples/tr/todo/scala-tutorial.kojo~:"Nearly all objects have a toString method to create a character representation.".p,
+src/main/resources/samples/tr/todo/scala-tutorial.kojo~:            row("String.valueOf(List(1,2,3))".c,"Converts P1 to String, where P1 is any value (primitive or object).")
+src/main/resources/samples/tr/todo/scala-tutorial.kojo~:            row("""write("hello world")""".c, "Makes the turtle write the specified object as a string at its current location."),
+src/main/resources/samples/tr/todo/solving-linear-equations.kojo:object EqnQuestion {
+src/main/resources/samples/tr/todo/d3-intro.kojo:// so that you can see objects very far away as
+src/main/resources/samples/tr/todo/d3-intro.kojo:            	since object's length on the screen depends on how far it is from the camera. A single
+src/main/resources/samples/tr/todo/d3-intro.kojo:            	pixel could represent a very short distance when working with nearby objects, or a very
+src/main/resources/samples/tr/todo/d3-intro.kojo:            	long distance when referring to distant objects. Instead, we use the axes to measure distance.
+src/main/resources/samples/tr/todo/lunar-lander.kojo:// Usage of simple math to center game objects
+src/main/resources/challenge/runner.kojo:object ProgramStatus extends Enumeration {
+src/main/java/net/kogics/kojo/util/NoOpPainter.java:    public void paint(Graphics2D g, JComponent object, int width, int height) {
+src/main/java/processing/core/PMatrix2D.java:      throw new IllegalArgumentException("PMatrix2D.set() only accepts PMatrix2D objects.");
+src/main/scala/net/kogics/kojo/music/Music.scala:object Music {
+src/main/scala/net/kogics/kojo/music/Mp3Player.scala:object Mp3Player {
+src/main/scala/net/kogics/kojo/staging/Sprite.scala:object Sprite {
+src/main/scala/net/kogics/kojo/staging/staging.scala:object Impl {
+src/main/scala/net/kogics/kojo/staging/staging.scala: * This object contains the API for using Staging within Kojo scripts.
+src/main/scala/net/kogics/kojo/staging/staging.scala:object Text {
+src/main/scala/net/kogics/kojo/staging/staging.scala:object Composite {
+src/main/scala/net/kogics/kojo/staging/staging.scala:object Style {
+src/main/scala/net/kogics/kojo/staging/staging.scala:object Bounds {
+src/main/scala/net/kogics/kojo/staging/SvgPath.scala:object SvgPath {
+src/main/scala/net/kogics/kojo/staging/SvgPath.scala:  object ParseExpr extends SVGPathParser {
+src/main/scala/net/kogics/kojo/staging/CapJoin.scala:object CapJoinConstants {
+src/main/scala/net/kogics/kojo/staging/screen.scala:object Screen {
+src/main/scala/net/kogics/kojo/staging/inputs.scala:object Inputs {
+src/main/scala/net/kogics/kojo/staging/complexshapes.scala:object Polyline {
+src/main/scala/net/kogics/kojo/staging/complexshapes.scala:object Polygon {
+src/main/scala/net/kogics/kojo/staging/complexshapes.scala:object LinesShape {
+src/main/scala/net/kogics/kojo/staging/complexshapes.scala:object TrianglesShape {
+src/main/scala/net/kogics/kojo/staging/complexshapes.scala:object TriangleStripShape {
+src/main/scala/net/kogics/kojo/staging/complexshapes.scala:object QuadsShape {
+src/main/scala/net/kogics/kojo/staging/complexshapes.scala:object QuadStripShape {
+src/main/scala/net/kogics/kojo/staging/complexshapes.scala:object HexShape {
+src/main/scala/net/kogics/kojo/staging/complexshapes.scala:object TriangleFanShape {
+src/main/scala/net/kogics/kojo/staging/svgshapes.scala:object SvgShape {
+src/main/scala/net/kogics/kojo/staging/KColor.scala:object KColor {
+src/main/scala/net/kogics/kojo/staging/ColorName.scala:object ColorName {
+src/main/scala/net/kogics/kojo/staging/color.scala:object ColorMaker {
+src/main/scala/net/kogics/kojo/staging/color.scala:object RichColor {
+src/main/scala/net/kogics/kojo/staging/simpleshapes.scala:object Dot {
+src/main/scala/net/kogics/kojo/staging/simpleshapes.scala:    // after the constructor for an object is done, its final fields (and the objects they refer to)
+src/main/scala/net/kogics/kojo/staging/simpleshapes.scala:object Line {
+src/main/scala/net/kogics/kojo/staging/simpleshapes.scala:object Rectangle {
+src/main/scala/net/kogics/kojo/staging/simpleshapes.scala:object RoundRectangle {
+src/main/scala/net/kogics/kojo/staging/simpleshapes.scala:object Ellipse {
+src/main/scala/net/kogics/kojo/staging/simpleshapes.scala:object Arc {
+src/main/scala/net/kogics/kojo/staging/simpleshapes.scala:object Cross {
+src/main/scala/net/kogics/kojo/staging/simpleshapes.scala:object CrossOutline {
+src/main/scala/net/kogics/kojo/staging/simpleshapes.scala:object Saltire {
+src/main/scala/net/kogics/kojo/staging/simpleshapes.scala:object SaltireOutline {
+src/main/scala/net/kogics/kojo/staging/simpleshapes.scala:object Vector {
+src/main/scala/net/kogics/kojo/staging/simpleshapes.scala:object Star {
+src/main/scala/net/kogics/kojo/staging/simpleshapes.scala:object Path {
+src/main/scala/net/kogics/kojo/kmath/Kmath.scala:object Kmath {
+src/main/scala/net/kogics/kojo/core/SpriteListener.scala:object NoopSpriteListener extends AbstractSpriteListener {}
+src/main/scala/net/kogics/kojo/core/CodeCompletionSupport.scala:object MemberKind extends Enumeration {
+src/main/scala/net/kogics/kojo/core/vertexShapeSupport.scala:object VertexShapeSupport {
+src/main/scala/net/kogics/kojo/core/codingmode.scala:case object TwMode extends CodingMode { val code = "tw" }
+src/main/scala/net/kogics/kojo/core/codingmode.scala:case object VanillaMode extends CodingMode { val code = "vn" }
+src/main/scala/net/kogics/kojo/core/TurtleMover.scala:case object Slow extends Speed
+src/main/scala/net/kogics/kojo/core/TurtleMover.scala:case object Medium extends Speed
+src/main/scala/net/kogics/kojo/core/TurtleMover.scala:case object Fast extends Speed
+src/main/scala/net/kogics/kojo/core/TurtleMover.scala:case object SuperFast extends Speed
+src/main/scala/net/kogics/kojo/core/package.scala:package object core {
+src/main/scala/net/kogics/kojo/core/codeRunner.scala:object Interpreter {
+src/main/scala/net/kogics/kojo/core/shapes.scala:object Point {
+src/main/scala/net/kogics/kojo/core/unitlen.scala:case object Pixel extends UnitLen
+src/main/scala/net/kogics/kojo/core/unitlen.scala:case object Cm extends UnitLen
+src/main/scala/net/kogics/kojo/core/unitlen.scala:case object Inch extends UnitLen
+src/main/scala/net/kogics/kojo/widget/swingwrappers.scala:object ColPanel {
+src/main/scala/net/kogics/kojo/turtle/TurtleWorldAPI.scala:  UserCommand("write", List("obj"), "Makes the turtle write the specified object as a string at its current location.")
+src/main/scala/net/kogics/kojo/turtle/TurtleHelper.scala:object TurtleHelper {
+src/main/scala/net/kogics/kojo/util/Constants.scala:object Constants {
+src/main/scala/net/kogics/kojo/util/ScalatestHelper.scala:object ScalatestHelper {
+src/main/scala/net/kogics/kojo/util/Math.scala:object Math {
+src/main/scala/net/kogics/kojo/util/PuzzleLoader.scala:object PuzzleLoader {
+src/main/scala/net/kogics/kojo/util/Unzipper.scala:object Unzipper {
+src/main/scala/net/kogics/kojo/util/Throttler.scala:object Throttler {
+src/main/scala/net/kogics/kojo/util/ziptools.scala://object ZipUtils {
+src/main/scala/net/kogics/kojo/util/TerminalAnsiCodes.scala:object TerminalAnsiCodes {
+src/main/scala/net/kogics/kojo/util/UserCommand.scala:object UserCommand {
+src/main/scala/net/kogics/kojo/util/Read.scala:object Read {
+src/main/scala/net/kogics/kojo/util/Read.scala:  implicit object StringRead extends Read[String] {
+src/main/scala/net/kogics/kojo/util/Read.scala:  implicit object DoubleRead extends Read[Double] {
+src/main/scala/net/kogics/kojo/util/Read.scala:  implicit object IntRead extends Read[Int] {
+src/main/scala/net/kogics/kojo/util/RichFile.scala:object RichFile {
+src/main/scala/net/kogics/kojo/util/Utils.scala:object Utils {
+src/main/scala/net/kogics/kojo/util/Utils.scala:   * @throws MissingResourceException if no object for the given key can be found
+src/main/scala/net/kogics/kojo/util/Utils.scala:  /**Locates where the log directory should be, creates it if necessary, and returns its File object.*/
+src/main/scala/net/kogics/kojo/util/typeclasses.scala:object Typeclasses extends Semigroups
+src/main/scala/net/kogics/kojo/util/typeclasses.scala:object Semigroup {
+src/main/scala/net/kogics/kojo/util/typeclasses.scala:object Identity { 
+src/main/scala/net/kogics/kojo/xscala/RepeatCommands.scala:object RepeatCommands extends RepeatCommands
+src/main/scala/net/kogics/kojo/xscala/CompilerAndRunner.scala:  // The Counter above is used to define/create a new wrapper object for every run. The calling of the entry() 
+src/main/scala/net/kogics/kojo/xscala/CompilerAndRunner.scala:  //.method within this object results in the initialization of the object, which causes the user submitted 
+src/main/scala/net/kogics/kojo/xscala/CompilerAndRunner.scala:  // If we don't increment the counter, the user code will not run (an object is initialized only once)
+src/main/scala/net/kogics/kojo/xscala/CompilerAndRunner.scala:  val prefixHeader = "object Wrapper"
+src/main/scala/net/kogics/kojo/xscala/Help.scala:object Help {
+src/main/scala/net/kogics/kojo/xscala/Help.scala:    "println" -> <div><strong>println</strong>(obj) - Displays the given object as a string in the output window, with a newline at the end.</div>.toString,
+src/main/scala/net/kogics/kojo/xscala/Help.scala:    "print" -> "print(obj) - Displays the given object as a string in the output window, without a newline at the end.",
+src/main/scala/net/kogics/kojo/xscala/Help.scala:    "inspect" -> "inspect(obj) - Opens up a window showing the internal fields of the given object",
+src/main/scala/net/kogics/kojo/xscala/Help.scala:    "write" -> <div><strong>write</strong>(obj) - Makes the turtle write, at its current location, the specified object as a string.</div>.toString,
+src/main/scala/net/kogics/kojo/xscala/ScalaCodeRunner2.scala:  case object Init
+src/main/scala/net/kogics/kojo/xscala/ScalaCodeRunner2.scala:  case object ActivateTw
+src/main/scala/net/kogics/kojo/xscala/ScalaCodeRunner2.scala:  case object ActivateVn
+src/main/scala/net/kogics/kojo/xscala/ScalaCodeRunner2.scala:  case object ResetInterp
+src/main/scala/net/kogics/kojo/xscala/ScalaCodeRunner2.scala:  object InterruptionManager {
+src/main/scala/net/kogics/kojo/xscala/CodeCompletionUtils.scala:object CodeCompletionUtils {
+src/main/scala/net/kogics/kojo/xscala/CodeCompletionUtils.scala:    "object",
+src/main/scala/net/kogics/kojo/xscala/CodeTemplates.scala:object CodeTemplates {
+src/main/scala/net/kogics/kojo/lite/MultiInstanceHandler.scala:object MultiInstanceManager {
+src/main/scala/net/kogics/kojo/lite/MultiInstanceHandler.scala:  // and the accompanying 'Problem - no such object in table' message that shows up in the Java Console  
+src/main/scala/net/kogics/kojo/lite/CodeExecutionSupport.scala:object CodeExecutionSupport {
+src/main/scala/net/kogics/kojo/lite/trace/TracingBuiltins.scala:object TracingBuiltins extends CoreBuiltins with RepeatCommands {
+src/main/scala/net/kogics/kojo/lite/trace/TracingBuiltins.scala:  object PicShape {
+src/main/scala/net/kogics/kojo/lite/trace/Tracing.scala:  val prefix0 = """object Wrapper {
+src/main/scala/net/kogics/kojo/lite/trace/Tracing.scala:object UserCode {
+src/main/scala/net/kogics/kojo/lite/DesktopMain.scala:object DesktopMain extends StubMain with RmiMultiInstance {
+src/main/scala/net/kogics/kojo/lite/Versions.scala:object Versions {
+src/main/scala/net/kogics/kojo/lite/NewKojoInstance.scala:object NewKojoInstance extends StubMain {
+src/main/scala/net/kogics/kojo/lite/Builtins.scala:object Builtins {
+src/main/scala/net/kogics/kojo/lite/Builtins.scala:  UserCommand.addSynopsis("println(obj) or print(obj) - Displays the given object as a string in the output window.")
+src/main/scala/net/kogics/kojo/lite/Builtins.scala:  object Picture {
+src/main/scala/net/kogics/kojo/lite/Builtins.scala:  object PictureMaker {
+src/main/scala/net/kogics/kojo/lite/Builtins.scala:  object Shape {
+src/main/scala/net/kogics/kojo/lite/papersizes.scala:case object A4 extends PaperSize {
+src/main/scala/net/kogics/kojo/lite/papersizes.scala:case object A4Landscape extends PaperSize {
+src/main/scala/net/kogics/kojo/lite/papersizes.scala:case object A3 extends PaperSize {
+src/main/scala/net/kogics/kojo/lite/papersizes.scala:case object A3Landscape extends PaperSize {
+src/main/scala/net/kogics/kojo/lite/papersizes.scala:case object A2 extends PaperSize {
+src/main/scala/net/kogics/kojo/lite/papersizes.scala:case object A2Landscape extends PaperSize {
+src/main/scala/net/kogics/kojo/lite/papersizes.scala:case object A1 extends PaperSize {
+src/main/scala/net/kogics/kojo/lite/papersizes.scala:case object A1Landscape extends PaperSize {
+src/main/scala/net/kogics/kojo/lite/papersizes.scala:case object A0 extends PaperSize {
+src/main/scala/net/kogics/kojo/lite/papersizes.scala:case object A0Landscape extends PaperSize {
+src/main/scala/net/kogics/kojo/lite/papersizes.scala:object PaperSize {
+src/main/scala/net/kogics/kojo/lite/AppMode.scala:object AppMode {
+src/main/scala/net/kogics/kojo/lite/action/actions.scala:object FullScreenSupport {
+src/main/scala/net/kogics/kojo/lite/action/actions.scala:object FullScreenCanvasAction {
+src/main/scala/net/kogics/kojo/lite/action/actions.scala:object FullScreenOutputAction {
+src/main/scala/net/kogics/kojo/lite/LangMenuFactory.scala:object LangMenuFactory {
+src/main/scala/net/kogics/kojo/lite/LoadProgress.scala:object LoadProgress {
+src/main/scala/net/kogics/kojo/lite/Theme.scala:object Theme {
+src/main/scala/net/kogics/kojo/lite/i18n/ruInit.scala:object RussianAPI {
+src/main/scala/net/kogics/kojo/lite/i18n/ruInit.scala:  object черепашка extends Черепашка0(builtins.TSCanvas.turtle0)
+src/main/scala/net/kogics/kojo/lite/i18n/ruInit.scala:  //  object KcSwe { //Key codes for Swedish keys
+src/main/scala/net/kogics/kojo/lite/i18n/ruInit.scala:object RussianInit {
+src/main/scala/net/kogics/kojo/lite/i18n/plInit.scala:object PolishAPI {
+src/main/scala/net/kogics/kojo/lite/i18n/plInit.scala:  object żółw extends Żółw0(builtins.TSCanvas.turtle0)
+src/main/scala/net/kogics/kojo/lite/i18n/plInit.scala:  object KcPL { //Key codes Polish
+src/main/scala/net/kogics/kojo/lite/i18n/plInit.scala:object PlInit {
+src/main/scala/net/kogics/kojo/lite/i18n/nlInit.scala:object DutchAPI {
+src/main/scala/net/kogics/kojo/lite/i18n/nlInit.scala:  object schildpad extends Schildpad0(builtins.TSCanvas.turtle0)
+src/main/scala/net/kogics/kojo/lite/i18n/nlInit.scala:object NlInit {
+src/main/scala/net/kogics/kojo/lite/i18n/svInit.scala:object SwedishAPI {
+src/main/scala/net/kogics/kojo/lite/i18n/svInit.scala:  object padda extends Padda0(builtins.TSCanvas.turtle0)
+src/main/scala/net/kogics/kojo/lite/i18n/svInit.scala:  object KcSwe { //Key codes for Swedish keys
+src/main/scala/net/kogics/kojo/lite/i18n/svInit.scala:object SvInit {
+src/main/scala/net/kogics/kojo/lite/i18n/itInit.scala:object ItalianDirectionCases {
+src/main/scala/net/kogics/kojo/lite/i18n/itInit.scala:  case object Right extends Direction
+src/main/scala/net/kogics/kojo/lite/i18n/itInit.scala:  case object Left extends Direction
+src/main/scala/net/kogics/kojo/lite/i18n/itInit.scala:  case object Top extends Direction
+src/main/scala/net/kogics/kojo/lite/i18n/itInit.scala:  case object Bottom extends Direction
+src/main/scala/net/kogics/kojo/lite/i18n/itInit.scala:  case object Destra extends Direzione
+src/main/scala/net/kogics/kojo/lite/i18n/itInit.scala:  case object Sinistra extends Direzione
+src/main/scala/net/kogics/kojo/lite/i18n/itInit.scala:  case object Alto extends Direzione
+src/main/scala/net/kogics/kojo/lite/i18n/itInit.scala:  case object Basso extends Direzione
+src/main/scala/net/kogics/kojo/lite/i18n/itInit.scala:object ItalianSpeedCases {
+src/main/scala/net/kogics/kojo/lite/i18n/itInit.scala:  case object Lentissima extends Velocità
+src/main/scala/net/kogics/kojo/lite/i18n/itInit.scala:  case object Lenta extends Velocità
+src/main/scala/net/kogics/kojo/lite/i18n/itInit.scala:  case object Media extends Velocità
+src/main/scala/net/kogics/kojo/lite/i18n/itInit.scala:  case object Veloce extends Velocità
+src/main/scala/net/kogics/kojo/lite/i18n/itInit.scala:  case object Velocissima extends Velocità
+src/main/scala/net/kogics/kojo/lite/i18n/itInit.scala:object ItalianCustomStatements {
+src/main/scala/net/kogics/kojo/lite/i18n/itInit.scala:object ItalianAPI {
+src/main/scala/net/kogics/kojo/lite/i18n/itInit.scala:  object tartaruga extends Tartaruga0(builtins.TSCanvas.turtle0)
+src/main/scala/net/kogics/kojo/lite/i18n/itInit.scala:object ItInit {
+src/main/scala/net/kogics/kojo/lite/i18n/trInit.scala:object TurkishAPI {
+src/main/scala/net/kogics/kojo/lite/i18n/trInit.scala:  object Nokta {
+src/main/scala/net/kogics/kojo/lite/i18n/trInit.scala:  object Dizin {
+src/main/scala/net/kogics/kojo/lite/i18n/trInit.scala:  object Sayılar {
+src/main/scala/net/kogics/kojo/lite/i18n/trInit.scala:  object kaplumbağa extends Kaplumbağa0(builtins.TSCanvas.turtle0)
+src/main/scala/net/kogics/kojo/lite/i18n/trInit.scala:  //  object KcSwe { //Key codes for Swedish keys
+src/main/scala/net/kogics/kojo/lite/i18n/trInit.scala:  object tuvalAlanı {
+src/main/scala/net/kogics/kojo/lite/i18n/trInit.scala:  object Resim {
+src/main/scala/net/kogics/kojo/lite/i18n/trInit.scala:object TurkishInit {
+src/main/scala/net/kogics/kojo/lite/i18n/LangInit.scala:object LangInit {
+src/main/scala/net/kogics/kojo/lite/i18n/hrInit.scala:object CroatianAPI {
+src/main/scala/net/kogics/kojo/lite/i18n/hrInit.scala:  object kornjača extends Kornjača0(builtins.TSCanvas.turtle0)
+src/main/scala/net/kogics/kojo/lite/i18n/hrInit.scala:  //  object KcSwe { //Key codes for Swedish keys
+src/main/scala/net/kogics/kojo/lite/i18n/hrInit.scala:object hrInit {
+src/main/scala/net/kogics/kojo/lite/i18n/deInit.scala:object GermanAPI {
+src/main/scala/net/kogics/kojo/lite/i18n/deInit.scala:  object kröte extends Kröte0(builtins.TSCanvas.turtle0)
+src/main/scala/net/kogics/kojo/lite/i18n/deInit.scala:  object KcGer { //Key codes for German keys as in Unicode
+src/main/scala/net/kogics/kojo/lite/i18n/deInit.scala:object DeInit {
+src/main/scala/net/kogics/kojo/lite/Main.scala:object Main extends AppMenu with ScriptLoader { main =>
+src/main/scala/net/kogics/kojo/lite/BreakpointPane.scala:object BreakpointPane {
+src/main/scala/net/kogics/kojo/figure/Figure.scala:object Figure {
+src/main/scala/net/kogics/kojo/codex/Talker.scala:object Talker {
+src/main/scala/net/kogics/kojo/picture/pics.scala:object Pic {
+src/main/scala/net/kogics/kojo/picture/pics.scala:object Pic0 {
+src/main/scala/net/kogics/kojo/picture/pics.scala:object HPics {
+src/main/scala/net/kogics/kojo/picture/pics.scala:object HPics2 {
+src/main/scala/net/kogics/kojo/picture/pics.scala:object VPics {
+src/main/scala/net/kogics/kojo/picture/pics.scala:object VPics2 {
+src/main/scala/net/kogics/kojo/picture/pics.scala:object GPics {
+src/main/scala/net/kogics/kojo/picture/pics.scala:object GPics2 {
+src/main/scala/net/kogics/kojo/picture/pics.scala:object BatchPics {
+src/main/scala/net/kogics/kojo/picture/transforms.scala:case object FlipYc extends ComposableTransformer {
+src/main/scala/net/kogics/kojo/picture/transforms.scala:case object FlipXc extends ComposableTransformer {
+src/main/scala/net/kogics/kojo/picture/transforms.scala:case object AxesOnc extends ComposableTransformer {
+src/main/scala/net/kogics/kojo/picture/cartooning.scala:object Cartooning {
+src/main/scala/net/kogics/kojo/picture/cartooning.scala:object Cartooning2 {
+src/main/scala/net/kogics/kojo/picture/cartooning.scala:object Skeleton {
+src/main/scala/net/kogics/kojo/picture/package.scala:package object picture {
+src/main/scala/net/kogics/kojo/picture/picdsl.scala:object PicCache {
+src/main/scala/net/kogics/kojo/appexport/WebAppExporter.scala:object WebAppExporter {
+src/main/scala/net/kogics/kojo/appexport/WebAppExporter.scala:object ScalaFiddle {
+src/main/scala/net/kogics/kojo/tiles/package.scala:package object tiles {
+src/main/scala/net/kogics/kojo/action/actions.scala:object CloseFile {
+src/main/scala/net/kogics/kojo/history/CommandHistory.scala:object CommandHistory {
+src/main/scala/net/kogics/kojo/history/historydb.scala:object Control {
+src/main/scala/net/kogics/kojo/kgeom/PolyLine.scala:object PolyLine {
+src/main/scala/net/kogics/kojo/syntax/Builtins.scala:object Builtins {
+src/main/scala/net/kogics/kojo/syntax/package.scala:package object syntax {
+src/main/scala/net/kogics/kojo/syntax/package.scala:  object angle      extends AngleSyntax
+src/main/scala/net/kogics/kojo/syntax/package.scala:  object normalized extends NormalizedSyntax
+src/main/scala/net/kogics/kojo/syntax/package.scala:  object uByte      extends UnsignedByteSyntax
+src/main/scala/net/kogics/kojo/story/htmlEditorKit.scala:object CustomHtmlEditorKit {
+src/main/scala/net/kogics/kojo/story/htmlEditorKit.scala:  // force usage of companion object - to warm up the latex subsystem
+src/main/scala/net/kogics/kojo/story/story.scala:object Page {
+src/main/scala/net/kogics/kojo/story/story.scala:object Para {
+src/main/scala/net/kogics/kojo/story/story.scala:object IncrPage {
+src/main/scala/net/kogics/kojo/doodle/Angle.scala:object Angle {
+src/main/scala/net/kogics/kojo/doodle/UnsignedByte.scala:object UnsignedByte {
+src/main/scala/net/kogics/kojo/doodle/Normalized.scala:object Normalized {
+src/main/scala/net/kogics/kojo/doodle/ColorMap.scala:object ColorMap {
+src/main/scala/net/kogics/kojo/doodle/Color.scala:object Color extends CommonColors {
+src/main/scala/net/kogics/swill/Conversation.scala:object Conversation {
+src/test/scala/net/kogics/kojo/util/UtilsTest.scala:/**Tests some methods of object Utils.
+src/test/scala/net/kogics/kojo/lite/TestEnv.scala:object TestEnv {
+src/test/scala/net/kogics/kojo/lite/CodeExecutionSupportTest.scala:/**Tests some methods of object CodeExecutionSupport.
+src/test/scala/net/kogics/kojo/picture/PictureCollisionTest.scala:      case _                  => assert(false, "Should have found p2 as collision object")
+src/test/scala/net/kogics/kojo/picture/PictureCollisionTest.scala:      case _    => assert(false, "Should have found no collision object")

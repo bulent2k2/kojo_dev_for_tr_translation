@@ -1,0 +1,13 @@
+# first go to the top dir of clone of bulent2k2/kojo repo:
+cd ~/src/kojo/git/kojo
+# now get a soft-link to this dir in the clone of bulent2k2/kojo_dev_for_tr_translation repo
+ln -s ~/src/kojo/git/for-kojo-rep a
+ln -s a/README.bb .
+ln -s a/TAGS .
+ln -s ../a/src-TAGS src/TAGS
+cd src/main/resources/samples/tr
+ln -s ~/src/kojo/git/for-kojo-rep a
+ln -s a/DIRS_WITH_TR_SAMPLES
+ln -s a/TRANSLATE_NOW
+ln -s a/composing-music.kojo
+
