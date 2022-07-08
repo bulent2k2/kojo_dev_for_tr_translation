@@ -1,7 +1,8 @@
 # first go to the top dir of clone of bulent2k2/kojo repo:
 cd ~/src/kojo/git/kojo
-# now get a soft-link to this dir in the clone of bulent2k2/kojo_dev_for_tr_translation repo
+# now get a soft-link (a) to this dir in the clone of bulent2k2/kojo_dev_for_tr_translation repo:
 ln -s ~/src/kojo/git/for-kojo-rep a
+# then, refer to the originals here as needed:
 ln -s a/README.bb .
 ln -s a/TAGS .
 ln -s ../a/src-TAGS src/TAGS
