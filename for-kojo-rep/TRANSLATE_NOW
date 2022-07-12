@@ -69,6 +69,7 @@ ben@Bulents-MacBook-Pro kojo %
 * keywords!
 val -> dez // değişmez değer
 var -> den // değişken değer
+def -> tanım // yeni yöntem ya da işlev tanımı
 * ~/src/kojo/git/kojo/src/main/scala/net/kogics/kojo/lite/AppMenu.scala:    val genProgMenu = newJMenu(Utils.loadString("S_GeneralProgramming"))
 * DONE oyunSüresiniGöster -> oyunSüresiniGeriyeSayarakGöster
 DONE addition-game.kojo:val oyunSüresi = 30 // Bir dakika sürsün istersen 60 girebilirsin

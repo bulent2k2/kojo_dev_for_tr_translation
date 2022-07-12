@@ -1,0 +1,119 @@
+bilgisayar siyah oynuyor.
+beyaz'ın hamlesi yok (10.hamle). Ama bunu bilmiyor. Ve bilgisayar oynamıyor. Ancak öneriye basınca ilerliyor.
+
+. . . .
+. S B .
+. B S .
+. . . .
+Alfa-beta Usta arama 0.120 saniye sürdü
+Hamle 1 S 2x1:
+. . . .
+. S B .
+. S S .
+. S . .
+Hamle 2 B 3x1:
+. . . .
+. S B .
+. S B .
+. S B .
+Alfa-beta Usta arama 0.063 saniye sürdü
+Hamle 3 S 4x4:
+. . . S
+. S S .
+. S B .
+. S B .
+Hamle 4 B 3x4:
+. . B S
+. S B .
+. S B .
+. S B .
+Alfa-beta Usta arama 0.023 saniye sürdü
+Hamle 5 S 4x1:
+. . B S
+. S B .
+. S S .
+. S S S
+Hamle 6 B 1x1:
+. . B S
+. S B .
+. B S .
+B S S S
+Alfa-beta Usta arama 0.008 saniye sürdü
+Hamle 7 S 2x4:
+. S S S
+. S B .
+. B S .
+B S S S
+Hamle 8 B 1x3:
+. S S S
+B B B .
+. B S .
+B S S S
+Alfa-beta Usta arama 0.002 saniye sürdü
+Hamle 9 S 1x2:
+. S S S
+B S B .
+S S S .
+B S S S
+Alfa-beta Usta arama 0.000 saniye sürdü
+Alfa-beta Usta arama 0.001 saniye sürdü
+Hamle 10 S 4x2:
+. S S S
+B S S .
+S S S S
+B S S S
+Alfa-beta Usta arama 0.000 saniye sürdü
+Hamle 9 S 1x2:
+. S S S
+B S B .
+S S S .
+B S S S
+Alfa-beta Usta arama 0.000 saniye sürdü
+Alfa-beta Usta arama 0.001 saniye sürdü
+Hamle 10 S 4x2:
+. S S S
+B S S .
+S S S S
+B S S S
+Alfa-beta Usta arama 0.001 saniye sürdü
+Hamle 10 S 4x2:
+. S S S
+B S S .
+S S S S
+B S S S
+Alfa-beta Usta arama 0.001 saniye sürdü
+Hamle 11 B 4x3:
+. S S S
+B B B B
+S S S S
+B S S S
+Alfa-beta Usta arama 0.001 saniye sürdü
+Hamle 9 S 1x2:
+. S S S
+B S B .
+S S S .
+B S S S
+Alfa-beta Usta arama 0.000 saniye sürdü
+Alfa-beta Usta arama 0.000 saniye sürdü
+Hamle 10 S 4x2:
+. S S S
+B S S .
+S S S S
+B S S S
+Hamle 11 B 4x3:
+. S S S
+B B B B
+S S S S
+B S S S
+Alfa-beta Usta arama 0.000 saniye sürdü
+Hamle 12 S 1x4:
+S S S S
+S S B B
+S S S S
+B S S S
+Alfa-beta Usta arama 0.000 saniye sürdü
+Hamle 9 S 1x2:
+. S S S
+B S B .
+S S S .
+B S S S
