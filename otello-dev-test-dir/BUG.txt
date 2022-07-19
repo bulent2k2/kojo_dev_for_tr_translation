@@ -1,5 +1,95 @@
-bilgisayar siyah oynuyor.
-beyaz'ın hamlesi yok (10.hamle). Ama bunu bilmiyor. Ve bilgisayar oynamıyor. Ancak öneriye basınca ilerliyor.
+* iki bug var
+* bilgisayar siyah olarak ilk hamleyi yapamıyor. 
+Bekliyor ki bir kareden çıkılsın. Ya da fare biraz kıpırdasın.
+Sonraki hamlelerde de aynı sorun var.
+* Bu onarıldı. 2022.07.19 Bilgisayar siyah oynuyor. 10. hamlede beyazın hamlesi yok takılıyor
+** Sadece türkçede. İngilizce'de sorun yok
+Alpha-beta search took 0.105 seconds
+Move 1. B on 2x1:
+. . . .
+. B W .
+. B B .
+. B . .
+Move 2. W on 3x1:
+. . . .
+. B W .
+. B W .
+. B W .
+Alpha-beta search took 0.030 seconds
+Move 3. B on 4x4:
+. . . B
+. B B .
+. B W .
+. B W .
+Move 4. W on 3x4:
+. . W B
+. B W .
+. B W .
+. B W .
+Alpha-beta search took 0.012 seconds
+Move 5. B on 4x1:
+. . W B
+. B W .
+. B B .
+. B B B
+Move 6. W on 1x1:
+. . W B
+. B W .
+. W B .
+W B B B
+Alpha-beta search took 0.011 seconds
+Move 7. B on 2x4:
+. B B B
+. B W .
+. W B .
+W B B B
+Move 8. W on 1x3:
+. B B B
+W W W .
+. W B .
+W B B B
+Alpha-beta search took 0.001 seconds
+Move 9. B on 1x2:
+There are no moves for White. Black to play again
+. B B B
+W B W .
+B B B .
+W B B B
+Alpha-beta search took 0.001 seconds
+Move 10. B on 4x2:
+. B B B
+W B B .
+B B B B
+W B B B
+Alpha-beta search took 0.000 seconds
+Move 11. W on 4x3:
+. B B B
+W W W W
+B B B B
+W B B B
+Alpha-beta search took 0.000 seconds
+Move 12. B on 1x4:
+B B B B
+B B W W
+B B B B
+W B B B
+The game is over.
+White: 3
+Black: 13
+** bilgisayar siyah oynuyor. beyaz'ın hamlesi yok (10.hamle). Ama bunu bilmiyor. Ve bilgisayar (siyah) oynamıyor. Ancak öneriye basınca ilerliyor.
+
+// ~/src/kojo/git/otello-dev-test-dir/otello-edit-here.kojo
+val çeşni = 0 // ya da 1
+val odaSayısı = 4
+val kimBaşlar = Siyah // Beyaz ya da Siyah başlayabilir. Seç :-)
+val bilgisayar = Siyah // Siyah ya da Beyaz oynar ya da Yok (yani oynamaz)
+
+val tahta = new ETahta(odaSayısı, kimBaşlar, çeşni)
+val bellek = new Bellek(tahta)
+val düzey = Usta
+ABa.ustalık(düzey)
+tümEkran()
+val araYüz = new Arayüz(tahta, bellek, bilgisayar)
 
 . . . .
 . S B .
@@ -36,7 +126,7 @@ Hamle 5 S 4x1:
 Hamle 6 B 1x1:
 . . B S
 . S B .
-. B S .
+  . B S .
 B S S S
 Alfa-beta Usta arama 0.008 saniye sürdü
 Hamle 7 S 2x4:
@@ -117,3 +207,4 @@ Hamle 9 S 1x2:
 B S B .
 S S S .
 B S S S
+* The End

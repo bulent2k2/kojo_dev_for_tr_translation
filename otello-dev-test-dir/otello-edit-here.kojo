@@ -13,6 +13,7 @@ val tahta = new ETahta(odaSayısı, kimBaşlar, çeşni)
 val bellek = new Bellek(tahta)
 val düzey = Usta
 ABa.ustalık(düzey)
+tümEkran()
 val araYüz = new Arayüz(tahta, bellek, bilgisayar)
 // 1) istersen bilgisayar çabucak bir oyunla başlayabilir
 // araYüz.özdevin(0.02) 
