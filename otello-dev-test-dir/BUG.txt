@@ -1,8 +1,321 @@
-* iki bug var
-* bilgisayar siyah olarak ilk hamleyi yapamıyor. 
-Bekliyor ki bir kareden çıkılsın. Ya da fare biraz kıpırdasın.
-Sonraki hamlelerde de aynı sorun var.
-* Bu onarıldı. 2022.07.19 Bilgisayar siyah oynuyor. 10. hamlede beyazın hamlesi yok takılıyor
+* 5 bug var
+* 5) Like 4, but after some fixes. After the final move, repaint doesn't work (when hilight on)
+Try any game and just check the last move. "Suggest Move" command works fine. Clicking doesn't!
+** code:
+//#include ui
+val size = 4 // or 6 or 8 or 10 or 12
+val variant = 0 // or 1
+val firstPlayer = Black // or White
+val computerPlays = Black // or White or Empty
+val board = new EBoard(size, firstPlayer, variant)
+clearOutput
+ABS.maxDepth = 12 // 8
+new UI(board, new History(board), computerPlays)
+** history
+Alpha-beta search took 0.324 seconds
+Move 1. B on 2x1:
+. . . .
+. B W .
+. B B .
+. B . .
+Move 2. W on 3x1:
+. . . .
+. B W .
+. B W .
+. B W .
+Alpha-beta search took 0.108 seconds
+Move 3. B on 4x2:
+. . . .
+. B W .
+. B B B
+. B W .
+Move 4. W on 1x1:
+. . . .
+. B W .
+. W B B
+W W W .
+Alpha-beta search took 0.026 seconds
+Move 5. B on 4x3:
+. . . .
+. B B B
+. W B B
+W W W .
+Move 6. W on 3x4:
+. . W .
+. B W B
+. W W B
+W W W .
+Alpha-beta search took 0.005 seconds
+Move 7. B on 2x4:
+. B W .
+. B B B
+. W W B
+W W W .
+Move 8. W on 1x4:
+W W W .
+. W B B
+. W W B
+W W W .
+Alpha-beta search took 0.001 seconds
+Move 9. B on 1x2:
+W W W .
+. W B B
+B B B B
+W W W .
+Move 10. W on 1x3:
+There are no moves for Black. White to play again
+W W W .
+W W B B
+W W B B
+W W W .
+Move 11. W on 4x4:
+There are no moves for Black. White to play again
+W W W W
+W W W B
+W W B B
+W W W .
+Move 12. W on 4x1:
+W W W W
+W W W W
+W W W W
+W W W W
+The game is over.
+White: 16
+Black: 0
+* 4) When player is skipped (move 7), flipped stones get mis-painted.
+THIS HAPPENS ONLY WHEN HINTS ARE ON!
+** TR: see BUG4.kojo Beyazın hamleleri: 1x1 3x1 1x3
+Beyazın birinci hamlesiyle başlıyor problem!
+val odaSayısı = 4
+val kimBaşlar = Siyah
+val bilgisayar = Siyah
+ABa.aramaDerinliğiSınırı = 12
+Yeni oyun:
+. . . .
+. S B .
+. B S .
+. . . .
+Alfa-beta DehadanÇok arama 0.207 saniye sürdü
+Hamle 1 S 2x1:
+. . . .
+. S B .
+. S S .
+. S . .
+Hamle 2 B 1x1:
+. . . .
+. S B .
+. B S .
+B S . .
+Alfa-beta DehadanÇok arama 0.033 saniye sürdü
+Hamle 3 S 4x3:
+. . . .
+. S S S
+. B S .
+B S . .
+Hamle 4 B 3x1:
+. . . .
+. S S S
+. B S .
+B B B .
+Alfa-beta DehadanÇok arama 0.006 saniye sürdü
+Hamle 5 S 1x2:
+. . . .
+. S S S
+S S S .
+B B B .
+Hamle 6 B 1x3:
+. . . .
+B S S S
+B B S .
+B B B .
+Yasal hamle yok. Sıra yine beyazın
+** EN: see test-english/test4.kojo 
+Altıncı hamleden sonra başlıyor problem.
+*** White moves: 1x1 3x1 1x3
+Alpha-beta search took 0.416 seconds
+Move 1. B on 2x1:
+. . . .
+. B W .
+. B B .
+. B . .
+Move 2. W on 1x1:
+. . . .
+. B W .
+. W B .
+W B . .
+Alpha-beta search took 0.062 seconds
+Move 3. B on 4x3:
+. . . .
+. B B B
+. W B .
+W B . .
+Move 4. W on 3x1:
+. . . .
+. B B B
+. W B .
+W W W .
+Alpha-beta search took 0.013 seconds
+Move 5. B on 1x2:
+. . . .
+. B B B
+B B B .
+W W W .
+Move 6. W on 1x3:
+There are no moves for Black. White to play again
+. . . .
+W B B B
+W W B .
+W W W .
+*** White moves: 3x1 1x3 1x1
+Move 1. B on 2x1:
+. . . .
+. B W .
+. B B .
+. B . .
+Alpha-beta search took 0.118 seconds
+Move 2. W on 3x1:
+. . . .
+. B W .
+. B W .
+. B W .
+Move 3. B on 4x1:
+. . . .
+. B W .
+. B B .
+. B B B
+Alpha-beta search took 0.020 seconds
+Move 4. W on 1x3:
+. . . .
+W W W .
+. B B .
+. B B B
+Move 5. B on 1x4:
+B . . .
+W B W .
+. B B .
+. B B B
+Alpha-beta search took 0.007 seconds
+Move 6. W on 1x1:
+B . . .
+W B W .
+. W B .
+W B B B
+Move 7. B on 1x2:
+There are no moves for White. Black to play again
+B . . .
+B B W .
+B B B .
+W B B B
+Move 8. B on 4x4:
+B . . B
+B B B .
+B B B .
+W B B B
+The game is over.
+White: 1
+Black: 11
+
+* 3) Bu da onarıldı. See: .kojo/lite/log/kojo0.log.BUG
+4x4 Deha bilgisayar beyazları oynar. siyah başlar.
+. . . .
+. S B .
+. B S .
+. . . .
+Hamle 1 S 2x1:
+. . . .
+. S B .
+. S S .
+. S . .
+Alfa-beta Deha arama 0.192 saniye sürdü
+Hamle 2 B 3x1:
+. . . .
+. S B .
+. S B .
+. S B .
+Hamle 3 S 4x1:
+. . . .
+. S B .
+. S S .
+. S S S
+Alfa-beta Deha arama 0.029 saniye sürdü
+Hamle 4 B 1x3:
+. . . .
+B B B .
+. S S .
+. S S S
+Hamle 5 S 1x4:
+S . . .
+B S B .
+. S S .
+. S S S
+Alfa-beta Deha arama 0.003 saniye sürdü
+Alfa-beta Deha arama 0.003 saniye sürdü
+Hamle 6 B 1x1:
+S . . .
+Hamle 6 B 1x1:
+B S B .
+S . . .
+. B S .
+B S B .
+B S S S
+. B S .
+B S S S
+Problem - java.lang.IndexOutOfBoundsException: 7 is out of bounds (min 0, max 5) (see log for details)
+java.lang.IndexOutOfBoundsException: 7 is out of bounds (min 0, max 5)
+	at scala.collection.mutable.ArrayBuffer.apply(ArrayBuffer.scala:97)
+	at net.kogics.kojo.lite.i18n.tr.EsnekDizim.apply(dizim.scala:28)
+	at Wrapper1$UserCode$Bellek.sıraGeriDöndüMü(scripteditor:303)
+	at Wrapper1$UserCode$Arayüz.skoruGüncelle(scripteditor:1062)
+	at Wrapper1$UserCode$Arayüz.hamleyiYap(scripteditor:891)
+	at Wrapper1$UserCode$Arayüz.öneri(scripteditor:954)
+Alfa-beta Deha arama 0.005 saniye sürdü
+Hamle 8 B 4x2:
+S . . .
+B S B .
+. B B B
+B S S S
+Problem - java.lang.IndexOutOfBoundsException: 8 is out of bounds (min 0, max 6) (see log for details)
+java.lang.IndexOutOfBoundsException: 8 is out of bounds (min 0, max 6)
+	at scala.collection.mutable.ArrayBuffer.apply(ArrayBuffer.scala:97)
+	at net.kogics.kojo.lite.i18n.tr.EsnekDizim.apply(dizim.scala:28)
+	at Wrapper1$UserCode$Bellek.sıraGeriDöndüMü(scripteditor:303)
+	at Wrapper1$UserCode$Arayüz.skoruGüncelle(scripteditor:1062)
+	at Wrapper1$UserCode$Arayüz.hamleyiYap(scripteditor:891)
+	at Wrapper1$UserCode$Arayüz.öneri(scripteditor:954)
+Hamle 9 S 1x2:
+S . . .
+S S B .
+S B B B
+B S S S
+Problem - java.lang.IndexOutOfBoundsException: 9 is out of bounds (min 0, max 7) (see log for details)
+Alfa-beta Deha arama 0.001 saniye sürdü
+Hamle 10 B 2x4:
+S B . .
+S B B .
+S B B B
+B S S S
+Problem - java.lang.IndexOutOfBoundsException: 10 is out of bounds (min 0, max 8) (see log for details)
+Hamle 11 S 3x4:
+S S S .
+S S S .
+S B S B
+B S S S
+Problem - java.lang.IndexOutOfBoundsException: 11 is out of bounds (min 0, max 9) (see log for details)
+Alfa-beta Deha arama 0.000 saniye sürdü
+Hamle 12 B 4x4:
+S S S B
+S S B .
+S B S B
+B S S S
+Problem - java.lang.IndexOutOfBoundsException: 12 is out of bounds (min 0, max 10) (see log for details)
+Hamle 13 S 4x3:
+S S S B
+S S S S
+S B S S
+B S S S
+Problem - java.lang.IndexOutOfBoundsException: 13 is out of bounds (min 0, max 11) (see log for details)
+
+* 2) Bu onarıldı. 2022.07.19 Bilgisayar siyah oynuyor. 10. hamlede beyazın hamlesi yok takılıyor
 ** Sadece türkçede. İngilizce'de sorun yok
 Alpha-beta search took 0.105 seconds
 Move 1. B on 2x1:
@@ -207,4 +520,7 @@ Hamle 9 S 1x2:
 B S B .
 S S S .
 B S S S
+* 1) Bu da onarıldı. bilgisayar siyah olarak ilk hamleyi yapamıyor (English only. Turkish works fine). 
+Bekliyor ki bir kareden çıkılsın. Ya da fare biraz kıpırdasın.
+Sonraki hamlelerde de aynı sorun var.
 * The End

@@ -1,5 +1,6 @@
 * Arduino: translate file names: #yukle ~/kojo-includes/ka-bridge.kojo -> #yukle ~/kojo-yuklemeler/ka-kopru.kojo
 ~/src/kojo/git/kojo/src/main/resources/ka-bridge/tr/sample.kojo
+* DONE Array.mapInPlace
 * DONE grep String *
 * tuşlar.VK_ESCAPE
 * Renk.fadeOut etc..

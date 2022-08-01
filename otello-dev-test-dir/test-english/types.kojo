@@ -1,0 +1,1 @@
+othello/types.kojo

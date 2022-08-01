@@ -13,6 +13,7 @@ val tahta = new ETahta(odaSayısı, kimBaşlar, çeşni)
 val bellek = new Bellek(tahta)
 val düzey = Deha
 ABa.ustalık(düzey)
+ABa.aramaDerinliğiSınırı = 8 // 12 4x4 için bile çok yavaş
 // tümEkran()
 val araYüz = new Arayüz(tahta, bellek, bilgisayar)
 // 1) istersen bilgisayar çabucak bir oyunla başlayabilir

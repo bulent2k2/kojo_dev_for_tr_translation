@@ -1,0 +1,1 @@
+othello/ui.kojo
