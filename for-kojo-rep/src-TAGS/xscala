@@ -1,0 +1,16 @@
+See: ~/src/kojo/git/for-kojo-rep/TAGS/xscala
+
+For:  /Users/ben/src/kojo/git/kojo/src/main/scala/net/kogics/kojo/xscala:
+  total used in directory 320 available 291.6 GiB
+  drwxr-xr-x@ 12 ben  staff    384 Aug  3 10:42 .
+  drwxr-xr-x@ 28 ben  staff    896 Jul 31 11:43 ..
+  -rw-r--r--   1 ben  staff  14084 Jul 31 11:18 CodeCompletionUtils.scala
+  -rw-r--r--   1 ben  staff   5261 Jul 31 11:18 CodeTemplates.scala
+  -rw-r--r--   1 ben  staff  21233 Jul 31 13:24 CompilerAndRunner.scala
+  -rw-r--r--   1 ben  staff  65994 Jul 31 11:18 Help.scala
+  -rw-r--r--   1 ben  staff   1418 Jul 31 11:18 RepeatCommands.scala
+  -rw-r--r--   1 ben  staff  26006 Jul 31 11:43 ScalaCodeRunner2.scala
+  -rw-r--r--   1 ben  staff    665 Oct 20  2020 StoppableCodeRunner.scala
+  lrwxr-xr-x   1 ben  staff     48 Aug  3 10:42 TAG -> /Users/ben/src/kojo/git/for-kojo-rep/TAGS/xscala
+  -rw-r--r--   1 ben  staff   1679 Jul 31 11:18 kojoInterpreter.scala
+  -rw-r--r--   1 ben  staff   4094 Jul 31 11:18 outputHandlers.scala
