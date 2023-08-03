@@ -1,0 +1,4 @@
+sbt:root> set scalaCompilerBridgeSource := sbt.internal.inc.ZincLmUtil.getDefaultBridgeModule(appConfiguration.value.provider.scalaProvider.version)
+sbt:root> consoleProject
+... do some stuff...
+sbt:root> session clear

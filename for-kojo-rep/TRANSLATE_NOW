@@ -1,3 +1,102 @@
+* This dir: ~/src/kojo/git/for-kojo-rep
+* This: ~/src/kojo/git/for-kojo-rep/TRANSLATE_NOW
+* Link TRANSLATE_NOW in ~/src/kojo/git/kojo/src/main/resources/samples/tr
+
+* keywords: ~/src/scala-2/README.keywords
+
+* 2013.04.15 TODO:
+/Users/ben/src/kojo/git/kojo/src/main/resources/samples/tr/animated-square-creation.kojo
+/Users/ben/src/kojo/git/kojo/src/main/resources/samples/tr/hunted-fp.kojo
+/Users/ben/src/kojo/git/kojo/src/main/resources/samples/tr/fireworks-canvas.kojo
+/Users/ben/src/kojo/git/kojo/src/main/resources/samples/tr/fireworks.kojo
+* DONE: easing
+** Find pointers to the code of KEasing in: trInit.scala
+** used in 
+  ~/src/kojo/git/kojo/src/main/resources/samples/tr/lamp-animation2.kojo
+  /Users/ben/src/kojo/git/kojo/src/main/resources/samples/tr/animated-square-creation.kojo
+* TODO: tune1.kojo and tune2.kojo
+* scanLeft and scanRight 
+* Extensions libk
+~/.kojo/lite/libk/animated-gif-lib-1.4.jar
+~/.kojo/extension/kojo-music/net.kogics.kojo-music-0.1.jar
+* Music
+If you run this program again while some music is playing, you will have to restart Kojo to stop the music that is playing from the previous run. So stop any playing music before re-running this program!
+Starting Alda Player...
+Launched Music Server. Waiting...
+qjc INFO  2022-09-09 15:16:07 StateManager.cleanUpStaleStateFiles:72 - Cleaning up stale files in /Users/ben/Library/Caches/alda/state/players...
+qjc INFO  2022-09-09 15:16:07 StateManager.cleanUpStaleStateFiles:72 - Cleaning up stale files in /Users/ben/Library/Caches/alda/state/repl-servers...
+qjc INFO  2022-09-09 15:16:07 Main.run:77 - Starting receiver, listening on port 46023...
+qjc INFO  2022-09-09 15:16:07 MidiEngine.<init>:276 - Initializing MIDI sequencer...
+qjc INFO  2022-09-09 15:16:07 MidiEngine.<init>:281 - Initializing MIDI synthesizer...
+Server is up and listening.
+qjc INFO  2022-09-09 15:16:10 Main.run:90 - Starting player...
+Music Server Started.
+* For color selection:
+.   actions.scala          2772 Scala            ~/src/kojo/git/kojo/src/main/scala/net/kogics/kojo/action/actions.scala
+  Bundle_tr.properties   12494 Conf[JavaProp]   ~/src/kojo/git/kojo/src/main/resources/net/kogics/kojo/lite/Bundle_tr.properties
+  Bundle.properties     11554 Conf[JavaProp]   ~/src/kojo/git/kojo/src/main/resources/net/kogics/kojo/lite/Bundle.properties
+
+* Init/start up
+Renk ve görünüş ayarları       → En üstteki 'Dosya' menüsünde 'Ayarlar' var. Ona tıkla
+Scanning libk...
+Additional jars available (within libk) - 25
+Scanning extensions...
+Additional jars available (within /Users/ben/.kojo/extension/kojo-music) - 4
+initk programı çalışıyor...
+                                      _____
+Kaplumbağalı Kojo'ya Hoşgeldin!
+* Renk seçin ~/src/kojo/git/kojo/src/main/scala/net/kogics/kojo/action/actions.scala
+Utils.loadString("S_Color").ilkHarfiBüyült
+      print("Selected Color:   ")
+      cprint("\u2588" * 6 + "\n", sColor)
+      val color = if (sColor.getAlpha < 255) {
+        "Color(%d, %d, %d, %d)".format(sColor.getRed, sColor.getGreen, sColor.getBlue, sColor.getAlpha)
+      }
+      else {
+        "Color(%d, %d, %d)".format(sColor.getRed, sColor.getGreen, sColor.getBlue)
+      }
+      println(color)
+      println("Example usage: setPenColor(%s)" format (color))
+
+* Compiler option!
+** Error[1,1]: not found: value abc
+abc x = 1
+^
+Error[1,5]: postfix operator x needs to be enabled
+by making the implicit value scala.language.postfixOps visible.
+----
+This can be achieved by adding the import clause 'import scala.language.postfixOps'
+or by setting the compiler option -language:postfixOps.
+See the Scaladoc for value scala.language.postfixOps for a discussion
+why the feature needs to be explicitly enabled.
+abc x = 1
+** Error[1,1]: not found: value dez
+dez x = 1
+^
+Error[1,5]: postfix operator x needs to be enabled
+by making the implicit value scala.language.postfixOps visible.
+----
+This can be achieved by adding the import clause 'import scala.language.postfixOps'
+or by setting the compiler option -language:postfixOps.
+See the Scaladoc for value scala.language.postfixOps for a discussion
+why the feature needs to be explicitly enabled.
+dez x = 1
+* DONE Checkin:
+- Fix code and samples not to use upcoming translations of keywords
+** Turkish keywords: bu, doğru, durum, eşle, son, yap, yeni
+** For the keywords: this, true, case, match, final, do, new
+- Translations for the names of a few more methods in Set, etc. (subsets, partition, empty)
+- Translations for a few more collections (IndexedSeq and Iterator)
+- Replace draw(pic) with pic.draw() -- hit the cache limit in one of my tests
+- A few pedagocial improvements to sample code
+* New turkish keywords should not be used in any Turkish code or sample! E.g.,
+doğru (true, line, Resim.doğru!) -> scala-tutorial and unit-circle
+eşle (match)
+bu (this)
+check in:
+  ~/src/kojo/git/for-kojo-rep/DIRS_WITH_TR_SAMPLES
+  ~/src/kojo/git/kojo/src/main/scala/net/kogics/kojo/lite/i18n/tr/*
+  ~/src/kojo/git/kojo/src/main/scala/net/kogics/kojo/lite/i18n/trInit.scala
 * Arduino: translate file names: #yukle ~/kojo-includes/ka-bridge.kojo -> #yukle ~/kojo-yuklemeler/ka-kopru.kojo
 ~/src/kojo/git/kojo/src/main/resources/ka-bridge/tr/sample.kojo
 * DONE Array.mapInPlace

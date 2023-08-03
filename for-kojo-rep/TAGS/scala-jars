@@ -1,0 +1,18 @@
+https://stackoverflow.com/questions/40622878/how-do-i-tell-sbt-or-scala-cli-to-use-a-nightly-build-of-scala-2-12-or-2-13
+
+https://app.travis-ci.com/github/scala/scala/builds
+https://app.travis-ci.com/github/scala/scala/branches
+
+https://github.com/scala/scala/commit/3faf9a98282a2f06219fd0b05b7fede2ab8fb326
+
+  -rw-r--r--   1 ben  staff   3733642 Aug 21 23:08 scala-reflect-2.13.9-bin-3faf9a9.jar
+  -rw-r--r--   1 ben  staff  12013953 Aug 21 23:08 scala-compiler-2.13.9-bin-3faf9a9.jar
+  -rw-r--r--   1 ben  staff   5937004 Aug 21 23:08 scala-library-2.13.9-bin-3faf9a9.jar
+
+cd ~/src/kojo/git/kojo
+ln -s /Users/ben/src/scala-2/build/pack/lib mbuild
+cd dist
+rm scala-compiler*.jar scala-reflect*.jar scala-library*.jar
+ln -s ../mbuild/scala-compiler.jar scala-compiler-2.13.9-bin-3faf9a9.jar
+ln -s ../mbuild/scala-reflect.jar scala-reflect-2.13.9-bin-3faf9a9.jar
+ln -s ../mbuild/scala-library.jar scala-library-2.13.9-bin-3faf9a9.jar

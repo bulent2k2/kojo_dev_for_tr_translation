@@ -1,3 +1,20 @@
+* install4j:
+cd ~/kojo-repo
+build
+./stage-i4j-installer
+<Install4j/Build> puts release assets in: ./installer.i4j
+
+** From Lalit
+- go to your kojo clone/workspace dir /Users/ben/src/kojo/git/kojo (or /home/lalit/work/kojo)
+- run ./stage-i4j-installer
+- fire up Install4j 10.x
+- edit the file /Users/ben/src/kojo/git/kojo/installer.i4j/kojo.install4j
+  in order to fix all hardcoded paths starting with /Users/ben/... (or /home/lalit/...)
+  to your own say </HOME/USERID/...>
+- Open the same file from inside Install4j (Open Project icon at the top)
+- run a build from inside Install4J
+- this will put your installers under /Users/ben/src/kojo/git/kojo/installer.i4j: (or /HOME/USERID/...)
+
 * 2022.06.08
 ** kojo doesn't compile with Java 15. So switch to Java 8 or 11:
 export PATH=.:/Users/ben/bin:/Library/Java/JavaVirtualMachines/jdk1.8.0_271.jdk/Contents/Home/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
