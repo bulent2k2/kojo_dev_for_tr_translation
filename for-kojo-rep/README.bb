@@ -1,8 +1,16 @@
+* GitHub personal access token for all repos: (Until 2024.08.09)
+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
+
 * install4j:
+(cd "/Users/ben/kojo-repo/")
 cd ~/kojo-repo
 build
 ./stage-i4j-installer
-<Install4j/Build> puts release assets in: ./installer.i4j
+< Install4j
+  1-Open Project (koco.install4j NOT kojo.*)
+  2-Update release v/info
+  3-Build
+> puts release assets in: ./installer.i4j  -- in less than 30 seconds!
 
 ** From Lalit
 - go to your kojo clone/workspace dir /Users/ben/src/kojo/git/kojo (or /home/lalit/work/kojo)
@@ -15,6 +23,69 @@ build
 - run a build from inside Install4J
 - this will put your installers under /Users/ben/src/kojo/git/kojo/installer.i4j: (or /HOME/USERID/...)
 
+* 2023.08.07
+(Using install4j Multi-Platform Edition 10.0.6 (build 10097))
+
+Kojo 2.9 Version: 2.9.25 r9 Build date: 1 August 2023 Java version: 11.0.13+7-b1751.21; x86_64. Scala version: 2.13.9-20220901-204524-d578a02  Copyright © 2009-2022 Lalit Pant (pant.lalit@gmail.com) as per contributions. Copyright © Project contributors as per contributions.  Please visit http://www.kogics.net/kojo for more information about Kojo.  Kojo Contributors:
+Lalit Pant
+Björn Regnell
+Peter Lewerin
+Phil Bagwell
+Tanu Nayal
+Vibha Pant
+Anusha Pant
+Nikhil Pant
+Sami Jaber
+Aditya Pant
+Jerzy Redlarski
+Saurabh Kapoor
+Mushtaq Ahmed
+Ilango
+Pierre Couillard
+Audrey Neveu
+Mikołaj Sochacki
+Eric Zoerner
+Jacco Huysmans
+Christoph Knabe
+Vipul Pandey
+Aleksei Loginov
+Massimo Maria Ghisalberti
+Luka Volaric
+Marcus Klang
+Bülent Başaran
+Guillermo Ovejero
+Alberto R.R. Manzanares
+Anay Kamat
+Kojo is licensed under The GNU General Public License (GPL). The full text of the GPL is available at: http://www.gnu.org/licenses/gpl.html  Kojo runs on the Java Platform.  The list of third-party software used by Kojo 2.x includes:
+The Scala Programming Language (http://www.scala-lang.org)
+Docking Frames (http://dock.javaforge.com/) for providing multiple, dockable windows
+RSyntaxTextArea (http://fifesoft.com/rsyntaxtextarea/) for Syntax Highlighting and Code Completion within the Script Editor
+Scalariform (https://github.com/mdr/scalariform/) for Code Formatting within the Script Editor
+Piccolo2D (http://www.piccolo2d.org) for 2D Graphics
+JTS Topology Suite (http://tsusiatsoftware.net/jts/main.html) for Collision Detection
+JFugue (http://www.jfugue.org) for computer generated music
+The H2 Database Engine (http://www.h2database.com) for storing history
+GeoGebra (http://www.geogebra.org) for Interactive Geometry and Algebra
+HttpUnit (http://httpunit.sourceforge.net/) for HTTP communication
+JLaTeXMath (http://forge.scilab.org/index.php/p/jlatexmath/) to display LaTeX commands
+JLayer (http://www.javazoom.net/javalayer/javalayer.html) to play MP3 files
+Table Layout (https://java.net/projects/tablelayout) for Arithmetic Aerobics
+The Netbeans Platform (http://www.netbeans.org) for some Script Editor Icons
+The Scratch Project (http://scratch.mit.edu) for some Media files
+The OpenJDK Project (http://openjdk.java.net/) for Tracing support
+JHLabs image filters (http://www.jhlabs.com/ip/filters/) for Picture effects
+jSSC (http://code.google.com/p/java-simple-serial-connector/) for serial port communication
+The Gargi font (http://savannah.nongnu.org/projects/gargi) for Devanagari support
+The Doodle project (https://github.com/underscoreio/doodle) for rich color support
+Scalatest (http://www.scalatest.org/) for testing
+Akka (https://akka.io/) for concurrency
+FlatLaf (https://github.com/JFormDesigner/FlatLaf) for the Kojo 'Look and Feel'
+libTiled (https://www.mapeditor.org/) to load game level files created with the Tiled Map Editor
+The Processing lib (https://processing.org/) for perlin noise and curved shapes
+Delaunay Triangulator (https://github.com/jdiemke/delaunay-triangulator) for triangulation of points
+Java implementation of HSLuv (https://github.com/hsluv/hsluv-java) for a perceptually uniform color space
+The Penner easing functions for animation (https://github.com/mattdesl/cisc226game/blob/master/SpaceGame/src/space/engine/easing/Easing.java)
+Rhino (https://developer.mozilla.org/en-US/docs/Mozilla/Projects/Rhino) for the Code Exchange interface
 * 2022.06.08
 ** kojo doesn't compile with Java 15. So switch to Java 8 or 11:
 export PATH=.:/Users/ben/bin:/Library/Java/JavaVirtualMachines/jdk1.8.0_271.jdk/Contents/Home/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
