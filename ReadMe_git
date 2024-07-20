@@ -1,4 +1,31 @@
-The following is useful after `rm -rf project/ target/`:
+* Kojo may not build with the Scala/Sbt/JavaSDK I use for coursera classes or other code
+In that case, simply use sbt_kojo or kojo_sbt aliases to compile/test/build.
+* In case of a conflict, github may not merge from lalit's latest. In that case, do the following:
+> Create a new branch (here we call it litan-master-*) based on my turkish branch:
+git checkout -b litan-master-20240710 turkish_keywords_2.13.x
+> Get the changes in
+git pull https://github.com/litan/kojo.git master
+> The conflict is in
+git add installer.i4j/kojo.install4j
+> Edit the file, stage and build just to make sure it all works...
+gs
+build
+> Now go back to my own branch and do the merge:
+git checkout turkish_keywords_2.13.x
+git merge --no-ff litan-master-20240710
+git push origin turkish_keywords_2.13.x
+** original: In case there is a conflict between two repos, do the following (thanks to GitHub.com):
+ 1115  gs
+ 1116  git checkout -b litan-master master
+ 1117  git pull https://github.com/litan/kojo.git master
+ 1118  echo Did a commit in emacs magit here
+ 1119  git checkout master
+ 1120  git merge --no-ff litan-master
+ 1121  git push origin master
+ 1122  gs
+ 1123  build
+ 1124  ../kojo_exe
+* The following is useful after `rm -rf project/ target/`:
   git restore -- project/build.properties project/plugins.sbt
 
 https://github.com/litan/kojo/blob/master/localization.md
@@ -31,17 +58,6 @@ OLD {
    git push --set-upstream origin master
 7- pull request from fork at GitHub
 
-* In case there is a conflict between two repos, do the following (thanks to GitHub.com):
- 1115  gs
- 1116  git checkout -b litan-master master
- 1117  git pull https://github.com/litan/kojo.git master
- 1118  echo Did a commit in emacs magit here
- 1119  git checkout master
- 1120  git merge --no-ff litan-master
- 1121  git push origin master
- 1122  gs
- 1123  build
- 1124  ../kojo_exe
 * Note: due to 2-step verification, had to do a little hacking:
 git remote remove origin
 git remote add origin git@github.com:bulent2k2/kojo.git
@@ -51,10 +67,13 @@ git credential-osxkeychain
 git config --global credential.helper osxkeychain
 git push --set-upstream origin master
 
-Asked for a username and for password, used my token:
+Asked for a username and for password, used my token: (DONT CHECKIN THIS!)
+***
+Expires 90 days after May 21, 2024
 IF IT DOESNT WORK, GET A NEW ONE: Profile -> Settings -> Developer Settings -> Personal access tokens, repo access only
 Then, just do a push (it may not work from Emacs shell, use terminal):
 % git push
+** Make sure to copy your personal access token now. You won’t be able to see it again!
 
 Username for 'https://github.com': bulent2k2
 Password for 'https://bulent2k2@github.com': <copy over the token from GitHub here>

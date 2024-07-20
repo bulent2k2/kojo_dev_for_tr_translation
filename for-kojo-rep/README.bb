@@ -11,6 +11,8 @@ build
   2-Update release v/info
   3-Build
 > puts release assets in: ./installer.i4j  -- in less than 30 seconds!
+commit and push all the code to my turkish branch
+create new release with new tag with target as my turkish branch -- add two *sums files and 4 Koco* files
 
 ** From Lalit
 - go to your kojo clone/workspace dir /Users/ben/src/kojo/git/kojo (or /home/lalit/work/kojo)

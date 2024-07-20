@@ -1,8 +1,37 @@
 * This dir: ~/src/kojo/git/for-kojo-rep
+  SEE: ./DIRS_WITH_TR_SAMPLES
 * This: ~/src/kojo/git/for-kojo-rep/TRANSLATE_NOW
 * Link TRANSLATE_NOW in ~/src/kojo/git/kojo/src/main/resources/samples/tr
 
-* keywords: ~/src/scala-2/README.keywords
+* anahtar sözcükler keywords: ~/src/scala-2/README.keywords
+
+* TODO: gizle or gizle() ??
+in trInit.scala:     def göster = görünür()
+                     def gizle = görünmez()
+ferris-wheel.kojo :gizle()
+fib-tree.kojo :gizle()
+hunted.kojo :gizle()
+kojo-documentation.kojo :      row("gizle".c, "Kaplumbağayı gizle. Kaplumbağacık görünmese de çizim yapmaya devam eder.", kod120.c),
+kojo-documentation.kojo :      row("silVeSakla".c, "Tuvali temizler, kaplumbağayı başlangıç noktasına döndürür ve gizler"),
+kojo-documentation.kojo :      row("gridiGizle()".c, "Gridi gizler"),
+kojo-documentation.kojo:      row("görünmez".c, "gizle komutuyla eş : kaplumbağayı gizler"),
+lunar-lander.kojo :        ateş.gizle()
+lunar-lander.kojo :        ateş.gizle()
+memory-cards.kojo :            rArkası.gizle()
+memory-cards.kojo :            rÖnü.gizle()
+physics-uvats.kojo :    geçenZaman.gizle()
+rangoli.kojo :    k.gizle()
+rangoli.kojo :    k.gizle()
+rangoli.kojo :    gizle()
+scala-tutorial.kojo :      row("gridiGizle()".c, "Gridi gizler"),
+tangram-skier.kojo :gizle()
+tangram-skier.kojo :    gizle()
+tree1.kojo :gizle()
+unit-circle.kojo :çiz(sin); sin.gizle()
+unit-circle.kojo :    çiz(koY); koY.gizle()
+unit-circle.kojo :çiz(kos); kos.gizle()
+unit-circle.kojo :den kayanEksenX = götür(0, 0) -> Resim.düz(1, 1); çiz(kayanEksenX); kayanEksenX.gizle()
+unit-circle.kojo :den kayanEksenY = götür(0, 0) -> Resim.düz(1, 1); çiz(kayanEksenY); kayanEksenY.gizle()
 
 * 2013.04.15 TODO:
 /Users/ben/src/kojo/git/kojo/src/main/resources/samples/tr/animated-square-creation.kojo
