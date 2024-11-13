@@ -4,12 +4,12 @@ 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
 * install4j:
 (cd "/Users/ben/kojo-repo/")
 cd ~/kojo-repo
-build
+java_std_path
 ./stage-i4j-installer
 < Install4j
   1-Open Project (koco.install4j NOT kojo.*)
   2-Update release v/info
-  3-Build
+  3-Build (takes less than half a minute :-)
 > puts release assets in: ./installer.i4j  -- in less than 30 seconds!
 commit and push all the code to my turkish branch
 create new release with new tag with target as my turkish branch -- add two *sums files and 4 Koco* files

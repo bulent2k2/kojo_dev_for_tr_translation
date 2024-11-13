@@ -1,3 +1,8 @@
+* To push to a new repo in GitHub, create it first there and then do:
+e.g., <link> being https://github.com/bulent2k2/cpp_ogreniyoruz.git
+  git remote add origin <link>
+  git pull --rebase
+  git push origin main
 * Kojo may not build with the Scala/Sbt/JavaSDK I use for coursera classes or other code
 In that case, simply use sbt_kojo or kojo_sbt aliases to compile/test/build.
 * In case of a conflict, github may not merge from lalit's latest. In that case, do the following:

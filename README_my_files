@@ -2,6 +2,28 @@
   ~/src/kojo/git/kojo/src/main/scala/net/kogics/kojo/lite/topc/DrawingCanvasHolder.scala
   ~/src/kojo/git/kojo/src/main/scala/net/kogics/kojo/xscala/CompilerAndRunner.scala
 * nokta -> dot ->             ~/src/kojo/git/kojo/src/main/scala/net/kogics/kojo/core/TurtleMover.scala
+* ~/kojo-repo/src/main/scala/net/kogics/kojo/lite/ScriptEditor.scala
+
+  val isTurkish = Utils.loadString("S_IncludePragma") == "yükle"
+  def trTypeUpdates(str: String): String =
+    str.replace("net.kogics.kojo.lite.i18n.tr.", "")
+      .replace("net.kogics.kojo.lite.i18n.TurkishAPI.", "")
+      .replace("UserCode.this.TurkishAPI.", "")
+      .replace("UserCode", "KullanıcınınYazılımı")
+      .replace("Wrapper", "Sarıcı")
+      .replace("type", "tür")
+
+in one big class:
+class ScriptEditor ... {
+...
+          {
+	  ...
+            case Some(_) => println(s"[type around] $word : $typeAt")
+            case None    => println(s"[type] $word : $typeAt")
+          }
+        case None => println(s"[type at cursor] $typeAt")
+}
+
 * kojo/src/main/resources/i18n/initk/tr.tw.kojo
 // make Turkish names visible
 val TurkishAPI = net.kogics.kojo.lite.i18n.TurkishAPI
@@ -105,6 +127,9 @@ object Picture in: ~/src/kojo/git/kojo/grep_object
 ~/src/kojo/git/kojo/l10n-level2/level2_tr.properties
 ~/src/kojo/git/kojo/src/main/
 ~/src/kojo/git/kojo/src/main/scala/net/kogics/kojo/lite/AppMenu.scala
+    simpleMenu.add(menuItemFor("S_Square", "square.kojo"))
+    simpleMenu.add(menuItemFor("S_ColorsShapes", "shapes-cols.kojo"))
+    simpleMenu.add(menuItemFor("S_SquarePattern", "square-pattern.kojo"))
              loadAndRunResourceNEL("/samples/", file)
     // mathActivityMenu.add(menuItemFor("S_AngleExperiment", "angle-experiment.kojo"))
     toolsMenu.add(menuItemFor("S_InstructionPalette", "instruction-palette.kojo"))
