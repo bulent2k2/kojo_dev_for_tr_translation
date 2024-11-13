@@ -3,6 +3,10 @@ e.g., <link> being https://github.com/bulent2k2/cpp_ogreniyoruz.git
   git remote add origin <link>
   git pull --rebase
   git push origin main
+** if merge fails, fix manually and then do
+  "git add/rm <conflicted_files>", then run "git rebase --continue".
+  hint: You can instead skip this commit: run "git rebase --skip".
+  hint: To abort and get back to the state before "git rebase", run "git rebase --abort".
 * Kojo may not build with the Scala/Sbt/JavaSDK I use for coursera classes or other code
 In that case, simply use sbt_kojo or kojo_sbt aliases to compile/test/build.
 * In case of a conflict, github may not merge from lalit's latest. In that case, do the following:
