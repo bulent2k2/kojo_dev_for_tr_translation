@@ -6,6 +6,13 @@
 
 * anahtar sözcükler keywords: ~/src/scala-2/README.keywords
 
+* Drag Protractor to move it around; 
+Shift-Drag to rotate.
+Drag Scale to move it around; 
+tuvalden
+
+açıölçeri göster tuvalın bağlam komudu, pergel?
+
 * DONE Upgrade to scala-2.13.15 and sbt.version=1.10.2 (enables Metals in VSCode)
 * [tür] sırayaSok : (kaçSaniyeSonra: Kesir)(komut: => Birim): javax.swing.Timer
 * DONE Matematik
