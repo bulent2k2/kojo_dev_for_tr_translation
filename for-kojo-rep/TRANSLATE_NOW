@@ -6,8 +6,12 @@
 
 * anahtar sözcükler keywords: ~/src/scala-2/README.keywords
 
+* [Storyteller] Problem browsing Url 
+BROWSE action not supported on the current platform [BBX: ChromeOS crouton]
+
 * scala tutorial and translate.scala
-Error: reassignment to Val...
+Error: reassignment to val...
+also for loop with if. show alternative with adım...
 
 * Drag Protractor to move it around; 
 Shift-Drag to rotate.
